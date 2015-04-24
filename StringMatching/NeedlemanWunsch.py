@@ -14,6 +14,7 @@ def initMatrix(S, T, sigma):
     for j in range(len(T)+1):
         matrix[j][0] = j*gapScore
 
+
     del i, j
 
     # start hardcore calculation
