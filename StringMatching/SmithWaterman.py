@@ -1,6 +1,7 @@
 __author__ = 'ronvis'
 
-from StringMatching.NWHelper import generateScoreFunction
+from StringMatching.Helper import generateScoreFunction, printCsv
+
 
 def initMatrix(S, T, sigma):
     # create a zero matrix
@@ -24,18 +25,10 @@ def initMatrix(S, T, sigma):
 
 def printScoreMatrix(S, T, sigma):
     matrix = initMatrix(S, T, sigma)
-
-    printableS = '       ' + '   '.join(S)
-    printableT = ' ' + T
-    print printableS
-
-    i = 0
-    for row in matrix:
-        print printableT[i] + ' ' + str(row)
-        i=i+1
+    printCsv(S, T, matrix)
 
 
-if __name__ == "__main__":
+def test():
     # S = randomDna(length=5)
     # T = randomDna(length=10)
     S = 'GCATCGATTCCGAGC'
@@ -43,3 +36,6 @@ if __name__ == "__main__":
     sigma = generateScoreFunction(2, -2, -3)
 
     printScoreMatrix(S, T, sigma)
+
+
+test()

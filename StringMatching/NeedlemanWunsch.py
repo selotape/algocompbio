@@ -1,6 +1,6 @@
 __author__ = 'ronvis'
 
-from StringMatching.NWHelper import generateScoreFunction
+from StringMatching.Helper import generateScoreFunction, printCsv
 
 
 def initMatrix(S, T, sigma):
@@ -15,9 +15,6 @@ def initMatrix(S, T, sigma):
 
     for j in range(len(T)+1):
         matrix[j][0] = j*gapScore
-
-
-    del i, j
 
     path = ''
     # start hardcore calculation
@@ -35,24 +32,7 @@ def initMatrix(S, T, sigma):
 
 def printScoreMatrix(S, T, sigma):
     matrix = initMatrix(S, T, sigma)
-
     printCsv(S, T, matrix)
-
-
-
-# print matrix with headers (in csv format)
-def printCsv(S, T, matrix):
-
-    printableS = ',' + ','.join(S)
-    printableT = ' ' + T
-
-    print printableS
-
-
-    i = 0
-    for row in matrix:
-        print printableT[i] + ',' + ','.join(str(c) for c in row)
-        i=i+1
 
 
 def test():

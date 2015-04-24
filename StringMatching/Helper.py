@@ -1,4 +1,6 @@
 from random import choice
+
+
 def randomDna(length):
 
    DNA=""
@@ -23,6 +25,20 @@ class scoreFunction:
             return self.gapScore
         else:
             return self.mismatchScore
+
+
+# print matrix with headers (in csv format)
+def printCsv(S, T, matrix):
+    printableS = ',,' + ','.join(S)
+    printableT = ' ' + T
+
+    print printableS
+
+    i = 0
+    for row in matrix:
+        print printableT[i] + ',' + ','.join(str(c) for c in row)
+        i = i + 1
+
 
 def generateScoreFunction(xx, xy, x_):
     return scoreFunction(xx, xy, x_).score
