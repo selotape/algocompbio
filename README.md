@@ -1,2 +1,2 @@
-# algocompbio
-Algorithms in computational biology. Python of course.
+# Algorithms in computational biology
+All python of course.
