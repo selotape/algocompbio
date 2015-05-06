@@ -1,6 +1,6 @@
 __author__ = 'ronvis'
 
-from StringMatching.Helper import generateScoreFunction, printCsv
+from StringMatching.Helper import generateScoreFunction, prettyPrint
 
 
 def initMatrix(S, T, sigma):
@@ -25,7 +25,7 @@ def initMatrix(S, T, sigma):
 
 def printScoreMatrix(S, T, sigma):
     matrix = initMatrix(S, T, sigma)
-    printCsv(S, T, matrix)
+    prettyPrint(S, T, matrix)
 
 
 def test():

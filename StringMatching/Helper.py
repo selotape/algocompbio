@@ -28,7 +28,7 @@ class scoreFunction:
 
 
 # print matrix with headers (in csv format)
-def printCsv(S, T, matrix):
+def prettyPrint(S, T, matrix):
     printableS = ',,' + ','.join(S)
     printableT = ' ' + T
 

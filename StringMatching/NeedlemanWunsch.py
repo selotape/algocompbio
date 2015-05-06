@@ -1,6 +1,6 @@
 __author__ = 'ronvis'
 
-from StringMatching.Helper import generateScoreFunction, printCsv
+from StringMatching.Helper import generateScoreFunction, prettyPrint
 
 
 def initMatrix(S, T, sigma):
@@ -9,23 +9,23 @@ def initMatrix(S, T, sigma):
     """
 
     # create a zero matrix
-    matrix = [[0 for x in range(len(S)+1)] for x in range(len(T)+1)]
+    matrix = [[0 for x in range(len(S) + 1)] for x in range(len(T) + 1)]
 
     gapscore = sigma('a', '_')
 
     # fill first line & column
-    for i in range(len(S)+1):
+    for i in range(len(S) + 1):
         matrix[0][i] = i * gapscore
 
-    for j in range(len(T)+1):
+    for j in range(len(T) + 1):
         matrix[j][0] = j * gapscore
 
     path = ''
     # start hardcore calculation
-    for i in range(1, len(S)+1, 1):
-        for j in range(1, len(T)+1, 1):
+    for i in range(1, len(S) + 1, 1):
+        for j in range(1, len(T) + 1, 1):
             # decide and score
-            align = matrix[j-1][i-1] + sigma(S[i-1], T[j-1])
+            align = matrix[j - 1][i - 1] + sigma(S[i - 1], T[j - 1])
             sgap = matrix[j - 1][i] + gapscore
             tgap = matrix[j][i - 1] + gapscore
             pick = max(align, sgap, tgap)
@@ -36,7 +36,7 @@ def initMatrix(S, T, sigma):
 
 def printScoreMatrix(S, T, sigma):
     matrix = initMatrix(S, T, sigma)
-    printCsv(S, T, matrix)
+    prettyPrint(S, T, matrix)
 
 
 def test():
@@ -47,6 +47,7 @@ def test():
     sigma = generateScoreFunction(2, -2, -3)
 
     printScoreMatrix(S, T, sigma)
+
 
 test()
 
