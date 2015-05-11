@@ -1,14 +1,17 @@
 __author__ = 'Wikipedia'
+from math import log
 
 
+# NOTE - assumes trans_p & emit_p contain no zeros
 def viterbi(obs, states, start_p, trans_p, emit_p):
     V = [{}]
     path = {}
 
     # Initialize base cases (t == 0)
     for y in states:
-        V[0][y] = start_p[y] * emit_p[y][obs[0]]
+        V[0][y] = log(start_p[y] * emit_p[y][obs[0]])
         path[y] = [y]
+
 
     # Run Viterbi for t > 0
     for t in range(1, len(obs)):
@@ -16,8 +19,8 @@ def viterbi(obs, states, start_p, trans_p, emit_p):
         newpath = {}
 
         for y in states:
-            (prob, state) = max((V[t - 1][y0] * trans_p[y0][y] * emit_p[y][obs[t]], y0) for y0 in states)
-            V[t][y] = prob
+            (logprob, state) = max((V[t - 1][y0] + log(trans_p[y0][y]) + log(emit_p[y][obs[t]]), y0) for y0 in states)
+            V[t][y] = logprob
             newpath[y] = path[state] + [y]
 
         # Don't need to remember the old paths
@@ -26,8 +29,8 @@ def viterbi(obs, states, start_p, trans_p, emit_p):
     if len(obs) != 1:
         n = t
     print_dptable(V)
-    (prob, state) = max((V[n][y], y) for y in states)
-    return (prob, path[state])
+    (logprob, state) = max((V[n][y], y) for y in states)
+    return (logprob, path[state])
 
 
 # Don't study this, it just prints a table of the steps.
@@ -41,38 +44,24 @@ def print_dptable(V):
 
 
 def example():
-    # states = ('Healthy', 'Fever')
-    states = ('Transmit0', 'Transmit1', 'Background0', 'Background1')
+    states = ('Trns0', 'Trns1', 'Bckg0', 'Bckg1')
 
-    # observations = ('normal', 'cold', 'dizzy')
     observations = '11011000'
 
-    # start_probability = {'Healthy': 0.6, 'Fever': 0.4}
-    start_probability = {'Transmit0': 0.5, 'Transmit1': 0.5, 'Background0': 0.0, 'Background1': 0.0}
-
-
-    # transition_probability = {
-    # 'Healthy' : {'Healthy': 0.7, 'Fever': 0.3},
-    # 'Fever' : {'Healthy': 0.4, 'Fever': 0.6}
-    #    }
+    start_probability = {'Trns0': 0.499999, 'Trns1': 0.499999, 'Bckg0': 0.000001, 'Bckg1': 0.000001}
 
     transition_probability = {
-        'Transmit0': {'Transmit0': 0.9 * 0.7, 'Transmit1': 0.9 * 0.3, 'Background0': 0.1, 'Background1': 0.0},
-        'Transmit1': {'Transmit0': 0.9 * 0.1, 'Transmit1': 0.9 * 0.9, 'Background0': 0.0, 'Background1': 0.1},
-        'Background0': {'Transmit0': 0.8 * 0.7, 'Transmit1': 0.8 * 0.3, 'Background0': 0.2, 'Background1': 0.0},
-        'Background1': {'Transmit0': 0.8 * 0.1, 'Transmit1': 0.8 * 0.9, 'Background0': 0.0, 'Background1': 0.2}
+        'Trns0': {'Trns0': 0.9 * 0.7, 'Trns1': 0.9 * 0.3, 'Bckg0': 0.099999, 'Bckg1': 0.000001},
+        'Trns1': {'Trns0': 0.9 * 0.1, 'Trns1': 0.9 * 0.9, 'Bckg0': 0.000001, 'Bckg1': 0.1},
+        'Bckg0': {'Trns0': 0.8 * 0.7, 'Trns1': 0.8 * 0.3, 'Bckg0': 0.199999, 'Bckg1': 0.000001},
+        'Bckg1': {'Trns0': 0.8 * 0.1, 'Trns1': 0.8 * 0.9, 'Bckg0': 0.000001, 'Bckg1': 0.199999}
     }
 
-
-    # emission_probability = {
-    #    'Healthy' : {'normal': 0.5, 'cold': 0.4, 'dizzy': 0.1},
-    #    'Fever' : {'normal': 0.1, 'cold': 0.3, 'dizzy': 0.6}
-    #    }
     emission_probability = {
-        'Transmit0': {'0': 0.8, '1': 0.2},
-        'Transmit1': {'0': 0.2, '1': 0.8},
-        'Background0': {'0': 0.5, '1': 0.5},
-        'Background1': {'0': 0.5, '1': 0.5}
+        'Trns0': {'0': 0.8, '1': 0.2},
+        'Trns1': {'0': 0.2, '1': 0.8},
+        'Bckg0': {'0': 0.5, '1': 0.5},
+        'Bckg1': {'0': 0.5, '1': 0.5}
     }
 
     return viterbi(observations,
