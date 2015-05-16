@@ -1,5 +1,5 @@
 __author__ = 'Wikipedia'
-from math import log, fsum
+from math import log, fsum, exp
 
 
 # NOTE - assumes trans_p & emit_p contain no zeros
@@ -25,36 +25,41 @@ def viterbi(obs, states, start_p, trans_p, emit_p):
 
         # Don't need to remember the old paths
         path = newpath
-    n = 0  # if only one element is observed max is sought in the initialization values
-    if len(obs) != 1:
-        n = t
+
     print_dptable(V)
-    (logprob, state) = max((V[n][y], y) for y in states)
+    (logprob, state) = max((V[t][y], y) for y in states)
     return (logprob, path[state])
 
 
-def viterbi_forward(obs, states, start_p, trans_p, emit_p):
+def forward_viterbi(obs, states, start_p, trans_p, emit_p):
     V = [{}]
     path = {}
 
     # Initialize base cases.
-    # the probability of each state is the probability
-    # of starting in it and emitting the first char.
     for y in states:
-        V[0][y] = start_p[y] * emit_p[y][obs[0]]
+        V[0][y] = log(start_p[y]) + log(emit_p[y][obs[0]])
 
     # Run Forward for t > 0
     for t in range(1, len(obs)):
         V.append({})
 
         for y in states:
-            prob = fsum(V[t - 1][y] * trans_p[y][y0] for y0 in states) * emit_p[y][obs[t]]
-            V[t][y] = prob
+            a_max = max(V[t - 1][y0] + log(trans_p[y0][y]) for y0 in states)
+            b_sum = sum(exp(V[t - 1][y0] + log(trans_p[y0][y]) - a_max) for y0 in states)
+            V[t][y] = log(b_sum) + a_max + log(emit_p[y][obs[t]])
 
-    if len(obs) != 1:
-        n = t
+    print '=== log scale==='
     print_dptable(V)
-    prob = fsum(V[t][y] for y in states)
+
+    # V_exp = V
+    # print '===prob scale==='
+    # for t in range(0, len(obs)):
+    # for y in states:
+    #         V_exp[t][y] = exp(V[t][y])
+    # print_dptable(V_exp)
+
+
+    prob = fsum([exp(x) for x in V[t].values()])
     return prob
 
 
@@ -88,10 +93,9 @@ def example():
         'Bckg1': {'0': 0.5, '1': 0.5}
     }
 
-    return viterbi_forward(observations,
-                           # tuple(emission_probability.keys()),
-                           emission_probability.keys(),
-                           start_probability,
+    return viterbi(observations,
+                   emission_probability.keys(),
+                   start_probability,
                    transition_probability,
                    emission_probability)
 
