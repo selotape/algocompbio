@@ -1,5 +1,5 @@
 __author__ = 'Wikipedia'
-from math import log
+from math import log, fsum
 
 
 # NOTE - assumes trans_p & emit_p contain no zeros
@@ -33,6 +33,31 @@ def viterbi(obs, states, start_p, trans_p, emit_p):
     return (logprob, path[state])
 
 
+def viterbi_forward(obs, states, start_p, trans_p, emit_p):
+    V = [{}]
+    path = {}
+
+    # Initialize base cases.
+    # the probability of each state is the probability
+    # of starting in it and emitting the first char.
+    for y in states:
+        V[0][y] = start_p[y] * emit_p[y][obs[0]]
+
+    # Run Forward for t > 0
+    for t in range(1, len(obs)):
+        V.append({})
+
+        for y in states:
+            prob = fsum(V[t - 1][y] * trans_p[y][y0] for y0 in states) * emit_p[y][obs[t]]
+            V[t][y] = prob
+
+    if len(obs) != 1:
+        n = t
+    print_dptable(V)
+    prob = fsum(V[t][y] for y in states)
+    return prob
+
+
 # Don't study this, it just prints a table of the steps.
 def print_dptable(V):
     s = "    " + " ".join(("%7d" % i) for i in range(len(V))) + "\n"
@@ -44,7 +69,6 @@ def print_dptable(V):
 
 
 def example():
-    states = ('Trns0', 'Trns1', 'Bckg0', 'Bckg1')
 
     observations = '11011000'
 
@@ -64,12 +88,13 @@ def example():
         'Bckg1': {'0': 0.5, '1': 0.5}
     }
 
-    return viterbi(observations,
-                   states,
-                   start_probability,
+    return viterbi_forward(observations,
+                           # tuple(emission_probability.keys()),
+                           emission_probability.keys(),
+                           start_probability,
                    transition_probability,
                    emission_probability)
 
 
-print(example())
+print("result: " + str(example()))
 
