@@ -2,6 +2,16 @@ __author__ = 'Wikipedia'
 from math import log, fsum, exp
 
 
+# Don't study this, it just prints a table of the steps.
+def print_dptable(V):
+    s = "    " + " ".join(("%7d" % i) for i in range(len(V))) + "\n"
+    for y in V[0]:
+        s += "%.5s: " % y
+        s += " ".join("%.7s" % ("%f" % v[y]) for v in V)
+        s += "\n"
+    print(s)
+
+
 # NOTE - assumes trans_p & emit_p contain no zeros
 def viterbi(obs, states, start_p, trans_p, emit_p):
     V = [{}]
@@ -63,17 +73,32 @@ def forward_viterbi(obs, states, start_p, trans_p, emit_p):
     return prob
 
 
-# Don't study this, it just prints a table of the steps.
-def print_dptable(V):
-    s = "    " + " ".join(("%7d" % i) for i in range(len(V))) + "\n"
-    for y in V[0]:
-        s += "%.5s: " % y
-        s += " ".join("%.7s" % ("%f" % v[y]) for v in V)
-        s += "\n"
-    print(s)
+def noise_and_null_viterbi(obs, states, start_p, trans_p, emit_p, total_emits):
+    V = [{}]
+
+    # Initialize base cases.
+    for y in states:
+        V[0][y] = [0 for m in range(total_emits + 1)]
+        for u in range(0, total_emits + 1):
+            V[0][y][u] = start_p[y] * pow(emit_p[y]['s'], u)
+
+    # now I have a matrix initialized
+    for t in range(0, len(obs)):
+        V.append({})
+        for y in states:
+            V[t][y] = [0 for m in range(total_emits + 1)]
+            for u in range(0, total_emits + 1):
+                best_with_sigma = 0
+                best_with_noise = 0
+                # best_with_transmission  =  max(  trans_p[][]*  for p in range(u))
 
 
-def example():
+
+                V[t][y][u] = max(best_with_noise, best_with_sigma, best_with_transmission)
+    return 0
+
+
+def example_viterbi():
 
     observations = '11011000'
 
@@ -100,5 +125,84 @@ def example():
                    emission_probability)
 
 
-print("result: " + str(example()))
+def example_forward():
+    observations = '11011000'
+
+    start_probability = {'Trns0': 0.499999, 'Trns1': 0.499999, 'Bckg0': 0.000001, 'Bckg1': 0.000001}
+
+    transition_probability = {
+        'Trns0': {'Trns0': 0.9 * 0.7, 'Trns1': 0.9 * 0.3, 'Bckg0': 0.099999, 'Bckg1': 0.000001},
+        'Trns1': {'Trns0': 0.9 * 0.1, 'Trns1': 0.9 * 0.9, 'Bckg0': 0.000001, 'Bckg1': 0.1},
+        'Bckg0': {'Trns0': 0.8 * 0.7, 'Trns1': 0.8 * 0.3, 'Bckg0': 0.199999, 'Bckg1': 0.000001},
+        'Bckg1': {'Trns0': 0.8 * 0.1, 'Trns1': 0.8 * 0.9, 'Bckg0': 0.000001, 'Bckg1': 0.199999}
+    }
+
+    emission_probability = {
+        'Trns0': {'0': 0.8, '1': 0.2},
+        'Trns1': {'0': 0.2, '1': 0.8},
+        'Bckg0': {'0': 0.5, '1': 0.5},
+        'Bckg1': {'0': 0.5, '1': 0.5}
+    }
+
+    return forward_viterbi(observations,
+                           emission_probability.keys(),
+                           start_probability,
+                           transition_probability,
+                           emission_probability)
+
+
+def example_sigmaI():
+    observations = '1101s000'
+
+    start_probability = {'Trns0': 0.499999, 'Trns1': 0.499999, 'Bckg0': 0.000001, 'Bckg1': 0.000001}
+
+    transition_probability = {
+        'Trns0': {'Trns0': 0.9 * 0.7, 'Trns1': 0.9 * 0.3, 'Bckg0': 0.099999, 'Bckg1': 0.000001},
+        'Trns1': {'Trns0': 0.9 * 0.1, 'Trns1': 0.9 * 0.9, 'Bckg0': 0.000001, 'Bckg1': 0.1},
+        'Bckg0': {'Trns0': 0.8 * 0.7, 'Trns1': 0.8 * 0.3, 'Bckg0': 0.199999, 'Bckg1': 0.000001},
+        'Bckg1': {'Trns0': 0.8 * 0.1, 'Trns1': 0.8 * 0.9, 'Bckg0': 0.000001, 'Bckg1': 0.199999}
+    }
+
+    emission_probability = {
+        'Trns0': {'0': 0.75, '1': 0.2, 's': 0.05},
+        'Trns1': {'0': 0.2, '1': 0.75, 's': 0.05},
+        'Bckg0': {'0': 0.5, '1': 0.499999, 's': 0.000001},
+        'Bckg1': {'0': 0.5, '1': 0.499999, 's': 0.000001}
+    }
+
+    return viterbi(observations,
+                   emission_probability.keys(),
+                   start_probability,
+                   transition_probability,
+                   emission_probability)
+
+
+def example_sigmaII():
+    observations = '1101000'
+
+    start_probability = {'Trns0': 0.499999, 'Trns1': 0.499999, 'Bckg0': 0.000001, 'Bckg1': 0.000001}
+
+    transition_probability = {
+        'Trns0': {'Trns0': 0.9 * 0.7, 'Trns1': 0.9 * 0.3, 'Bckg0': 0.099999, 'Bckg1': 0.000001},
+        'Trns1': {'Trns0': 0.9 * 0.1, 'Trns1': 0.9 * 0.9, 'Bckg0': 0.000001, 'Bckg1': 0.1},
+        'Bckg0': {'Trns0': 0.8 * 0.7, 'Trns1': 0.8 * 0.3, 'Bckg0': 0.199999, 'Bckg1': 0.000001},
+        'Bckg1': {'Trns0': 0.8 * 0.1, 'Trns1': 0.8 * 0.9, 'Bckg0': 0.000001, 'Bckg1': 0.199999}
+    }
+
+    emission_probability = {
+        'Trns0': {'0': 0.75, '1': 0.2, 's': 0.05},
+        'Trns1': {'0': 0.2, '1': 0.75, 's': 0.05},
+        'Bckg0': {'0': 0.5, '1': 0.499999, 's': 0.000001},
+        'Bckg1': {'0': 0.5, '1': 0.499999, 's': 0.000001}
+    }
+
+    return noise_and_null_viterbi(observations,
+                                  emission_probability.keys(),
+                                  start_probability,
+                                  transition_probability,
+                                  emission_probability,
+                                  8)
+
+
+print("result: " + str(example_sigmaII()))
 
