@@ -40,5 +40,15 @@ def prettyPrint(S, T, matrix):
         i = i + 1
 
 
+# print matrix with headers (in csv format) ---- from Liahav
+def print_dp(V):
+    s = "    " + " ".join(("%7d" % i) for i in range(len(V))) + "\n"
+    for y in V[0]:
+        s += "%.5s: " % y
+        s += " ".join(("%.7s" % ("%f" % v[y]) if v[y] > MIN_INF else "  -INF ") for v in V)
+        s += "\n"
+    print(s)
+
+
 def generateScoreFunction(xx, xy, x_):
     return scoreFunction(xx, xy, x_).score
