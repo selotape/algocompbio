@@ -19,10 +19,28 @@ pprint = PrettyPrinter(indent=4).pprint
 
 
 def sufficient_transition_statistics(states, path):
-    N = defaultdict()
+    # init
+    Nt = {}
+    for state in states:
+        Nt[state] = defaultdict(int)
 
-    print 'N', N
-    return N
+    # calculate
+    for current, next in zip(path, path[1:]):
+        Nt[current][next] += 1
+
+
+    # normalize
+    for a in states:
+        total_appearances = sum(Nt[a].values())
+
+        if total_appearances:
+            for b in states:
+                Nt[a][b] = float(Nt[a][b]) / total_appearances
+        else:  # this state is unobserved so we'll arbitrarily assign equal transition probabilities
+            for b in states:
+                Nt[a][b] = 1.0 / len(states)
+
+    return Nt
 
 
 def sufficient_emission_statistics(states, path, X):
@@ -39,7 +57,7 @@ def viterbi_inference(X, S, E, T):
 
     while logprob1 != logprob2:
         Nt = sufficient_transition_statistics(states, path1)
-        # Ne = sufficient_emission_statistics(states, path1, X)
+        Ne = sufficient_emission_statistics(states, path1, X)
         # E1, T1 = normalize(Nt, Ne)
         # logprob1, path1 = viterbi(X, states, S, T1, E1)
 
@@ -65,7 +83,7 @@ def infer_model(X, method, S, E, T, sigma=DEFAULT_MARGIN):
 def test_inferences():
     method = VITERBI
 
-    X = '1101000'
+    X = '11010011110101010111100011010011010010101101010101000101010101010010101010110101010000001100000011000000110'
 
     S = {'Trns0': 0.499999, 'Trns1': 0.499999, 'Bckg0': 0.000001, 'Bckg1': 0.000001}
 
