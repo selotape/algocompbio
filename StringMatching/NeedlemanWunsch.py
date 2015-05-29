@@ -1,6 +1,6 @@
 __author__ = 'ronvis'
 
-from StringMatching.Helper import generateScoreFunction, prettyPrint
+from StringMatching.Helper import generate_score_function, my_pretty_print
 
 
 def initMatrix(S, T, sigma):
@@ -36,15 +36,15 @@ def initMatrix(S, T, sigma):
 
 def printScoreMatrix(S, T, sigma):
     matrix = initMatrix(S, T, sigma)
-    prettyPrint(S, T, matrix)
+    my_pretty_print(S, T, matrix)
 
 
 def test():
-    # S = randomDna(length=5)
-    # T = randomDna(length=10)
+    # S = random_dna(length=5)
+    # T = random_dna(length=10)
     S = 'GCATCGATTCCGAGC'
     T = 'GCCATGATGAAC'
-    sigma = generateScoreFunction(2, -2, -3)
+    sigma = generate_score_function(2, -2, -3)
 
     printScoreMatrix(S, T, sigma)
 

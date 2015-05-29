@@ -4,6 +4,7 @@ import sys
 
 MIN_INF = -sys.maxint
 
+__author__ = 'ronvis'
 
 def log0(x):
     if x == 0:
@@ -11,18 +12,15 @@ def log0(x):
     else:
         return log(x)
 
-def randomDna(length):
 
-   DNA=""
-   for count in range(length):
-      DNA+=choice("CGTA")
-   return DNA
-
-
-__author__ = 'ronvis'
+def random_dna(length):
+    DNA = ""
+    for count in range(length):
+        DNA += choice("CGTA")
+    return DNA
 
 
-class scoreFunction:
+class score_function:
     def __init__(self, matchScore, mismatchScore, gapScore):
         self.matchScore = matchScore
         self.mismatchScore = mismatchScore
@@ -38,7 +36,7 @@ class scoreFunction:
 
 
 # print matrix with headers (in csv format)
-def prettyPrint(S, T, matrix):
+def my_pretty_print(S, T, matrix):
     printableS = ',,' + ','.join(S)
     printableT = ' ' + T
 
@@ -60,5 +58,5 @@ def print_dp(V):
     print(s)
 
 
-def generateScoreFunction(xx, xy, x_):
-    return scoreFunction(xx, xy, x_).score
+def generate_score_function(xx, xy, x_):
+    return score_function(xx, xy, x_).score

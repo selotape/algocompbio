@@ -1,6 +1,6 @@
 __author__ = 'ronvis'
 
-from StringMatching.Helper import generateScoreFunction
+from StringMatching.Helper import generate_score_function
 
 
 def initMatrix(S, T, homology):
@@ -28,15 +28,15 @@ def initMatrix(S, T, homology):
 
 
 def test():
-    # S = randomDna(length=5)
-    # T = randomDna(length=10)
+    # S = random_dna(length=5)
+    # T = random_dna(length=10)
     S = 'GCATCGATTCCGAGC'
     T = 'GCCATGATGAAC'
-    homology = generateScoreFunction(32.0 / 160, 2.0 / 160, 1.0 / 160)
+    homology = generate_score_function(32.0 / 160, 2.0 / 160, 1.0 / 160)
 
     matrix = initMatrix(S, T, homology)
 
-    # prettyPrint(S, T, matrix)
+    # my_pretty_print(S, T, matrix)
     print 'sumHomology: ', str(matrix[len(T)][len(S)])
 
 
