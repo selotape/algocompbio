@@ -1,5 +1,15 @@
 from random import choice
+from math import log
+import sys
 
+MIN_INF = -sys.maxint
+
+
+def log0(x):
+    if x == 0:
+        return MIN_INF
+    else:
+        return log(x)
 
 def randomDna(length):
 

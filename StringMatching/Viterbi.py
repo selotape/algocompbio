@@ -1,5 +1,8 @@
 __author__ = 'Wikipedia'
-from math import log, fsum, exp
+from math import fsum, exp
+
+from Helper import log0
+
 
 
 # Don't study this, it just prints a table of the steps.
@@ -19,7 +22,7 @@ def viterbi(obs, states, start_p, trans_p, emit_p):
 
     # Initialize base cases (t == 0)
     for y in states:
-        V[0][y] = log(start_p[y] * emit_p[y][obs[0]])
+        V[0][y] = log0(start_p[y] * emit_p[y][obs[0]])
         path[y] = [y]
 
 
@@ -29,7 +32,7 @@ def viterbi(obs, states, start_p, trans_p, emit_p):
         newpath = {}
 
         for y in states:
-            (logprob, state) = max((V[t - 1][y0] + log(trans_p[y0][y]) + log(emit_p[y][obs[t]]), y0) for y0 in states)
+            (logprob, state) = max((V[t - 1][y0] + log0(trans_p[y0][y]) + log0(emit_p[y][obs[t]]), y0) for y0 in states)
             V[t][y] = logprob
             newpath[y] = path[state] + [y]
 
@@ -47,16 +50,16 @@ def forward_viterbi(obs, states, start_p, trans_p, emit_p):
 
     # Initialize base cases.
     for y in states:
-        V[0][y] = log(start_p[y]) + log(emit_p[y][obs[0]])
+        V[0][y] = log0(start_p[y]) + log0(emit_p[y][obs[0]])
 
     # Run Forward for t > 0
     for t in range(1, len(obs)):
         V.append({})
 
         for y in states:
-            a_max = max(V[t - 1][y0] + log(trans_p[y0][y]) for y0 in states)
-            b_sum = sum(exp(V[t - 1][y0] + log(trans_p[y0][y]) - a_max) for y0 in states)
-            V[t][y] = log(b_sum) + a_max + log(emit_p[y][obs[t]])
+            a_max = max(V[t - 1][y0] + log0(trans_p[y0][y]) for y0 in states)
+            b_sum = sum(exp(V[t - 1][y0] + log0(trans_p[y0][y]) - a_max) for y0 in states)
+            V[t][y] = log0(b_sum) + a_max + log0(emit_p[y][obs[t]])
 
     print '=== log scale==='
     print_dptable(V)
@@ -205,5 +208,6 @@ def example_sigmaII():
                                   8)
 
 
-# print("result: " + str(example_viterbi()))
+if __name__ == "__main__":
+    print("result: " + str(example_viterbi()))
 

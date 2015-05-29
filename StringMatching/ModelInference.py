@@ -1,5 +1,4 @@
 from copy import deepcopy
-from sys import maxint
 from pprint import PrettyPrinter
 from collections import defaultdict
 
@@ -13,7 +12,6 @@ __author__ = 'ronvis'
 DEFAULT_MARGIN = 0.005
 VITERBI = 'viterbi'
 BAUM_WELCH = 'baum-welch'
-MIN_INF = -maxint
 
 pprint = PrettyPrinter(indent=4).pprint
 
@@ -80,13 +78,15 @@ def viterbi_inference(X, S, E, T, alphabet):
     logprob2, path2 = 0, []
 
     while logprob1 != logprob2:
+        logprob1 = logprob2
         Nt = sufficient_transition_statistics(states, path1)
         Ne = sufficient_emission_statistics(states, alphabet, path1, X)
-        # E1, T1 = normalize(Nt, Ne)
-        # logprob1, path1 = viterbi(X, states, S, T1, E1)
+        logprob2, path2 = viterbi(X, states, S, Nt, Ne)
 
-        logprob1 = logprob2
-    return E1, T1
+        pprint(Ne)
+        pprint(Nt)
+
+    return Ne, Nt
 
 
 def baum_welch_inference(X, S, E, T, sigma):
@@ -100,7 +100,7 @@ def infer_model(method, X, S, E, T, alphabet, sigma=DEFAULT_MARGIN):
     elif 'baum-welch' == method:
         E, T = baum_welch_inference(X, S, E, T, sigma)
     else:
-        raise NotImplementedError("This algorithm is yet to be invented.")
+        raise NotImplementedError("algorithm " + method + " is yet to be invented.")
     return E, T
 
 
@@ -128,8 +128,8 @@ def test_inferences():
     }
 
     E, T = infer_model(method, X, S, E, T, alphabet)
-    # pprint(E)
-    # pprint(T)
+    pprint(E)
+    pprint(T)
 
 
 test_inferences()
