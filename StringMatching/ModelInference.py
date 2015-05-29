@@ -5,6 +5,7 @@ from Viterbi import viterbi
 
 
 
+
 # ##CONSTANTS###
 DEFAULT_MARGIN = 0.005
 VITERBI = 'viterbi'
@@ -70,7 +71,7 @@ def viterbi_inference(X, S, E, T, alphabet, states):
     print last_logprob, last_path
     current_logprob, current_path = 0, []
 
-    while last_logprob != current_logprob:
+    while last_logprob != current_logprob:  # TODO - instead of equality, change stop condition to rely on the required diff
         last_logprob = current_logprob
 
         Nt = sufficient_transition_statistics(states, last_path)

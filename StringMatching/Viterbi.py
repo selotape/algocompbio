@@ -71,7 +71,12 @@ def forward_viterbi(obs, states, start_p, trans_p, emit_p):
 
 
     prob = fsum([exp(x) for x in V[t].values()])
-    return prob
+    return prob  # TODO - also return the dp matrix
+
+
+def backward_viterbi(obs, states, start_p, trans_p, emit_p):
+    # TODO - implement backward [?]viterbi which returns the dp matrix
+    pass
 
 
 def noise_and_null_viterbi(obs, states, start_p, trans_p, emit_p, total_emits):
