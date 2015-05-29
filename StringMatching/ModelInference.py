@@ -5,6 +5,7 @@ from Viterbi import viterbi
 
 
 
+
 # ##CONSTANTS###
 DEFAULT_MARGIN = 0.005
 VITERBI = 'viterbi'
@@ -98,7 +99,9 @@ def infer_model(method, X, S, E, T, alphabet, states, sigma=DEFAULT_MARGIN):
     return E, T
 
 
-def test_inferences(method):
+def test_inferences():
+    method = VITERBI
+
     alphabet = ['0', '1']
 
     X = '11111111111111100000000000000000000111000000111111111111111000000000000'
@@ -129,8 +132,7 @@ def test_inferences(method):
 
 
 if __name__ == '__main__':
-    chosen_method = VITERBI
-    test_inferences(chosen_method)
+    test_inferences()
 
 
 

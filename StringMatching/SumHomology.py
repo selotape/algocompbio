@@ -39,7 +39,6 @@ def test():
     # prettyPrint(S, T, matrix)
     print 'sumHomology: ', str(matrix[len(T)][len(S)])
 
-test()
 
-
-
+if __name__ == '__main__':
+    test()

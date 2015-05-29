@@ -49,7 +49,5 @@ def test():
     printScoreMatrix(S, T, sigma)
 
 
-test()
-
-
-
+if __name__ == '__main__':
+    test()

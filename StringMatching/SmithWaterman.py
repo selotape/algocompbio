@@ -5,18 +5,18 @@ from StringMatching.Helper import generateScoreFunction, prettyPrint
 
 def initMatrix(S, T, sigma):
     # create a zero matrix
-    matrix = [[0 for x in range(len(S)+1)] for x in range(len(T)+1)]
+    matrix = [[0 for x in range(len(S) + 1)] for x in range(len(T) + 1)]
 
     gapScore = sigma('a', '_')
 
     path = ''
     # start hardcore calculation
-    for i in range(1, len(S)+1, 1):
-        for j in range(1, len(T)+1, 1):
+    for i in range(1, len(S) + 1, 1):
+        for j in range(1, len(T) + 1, 1):
             # decide and score
-            align = matrix[j-1][i-1] + sigma(S[i-1], T[j-1])
-            SGap = matrix[j-1][i] + gapScore
-            TGap = matrix[j][i-1] + gapScore
+            align = matrix[j - 1][i - 1] + sigma(S[i - 1], T[j - 1])
+            SGap = matrix[j - 1][i] + gapScore
+            TGap = matrix[j][i - 1] + gapScore
             pick = max(align, SGap, TGap, 0)
             matrix[j][i] = pick
 
@@ -38,4 +38,5 @@ def test():
     printScoreMatrix(S, T, sigma)
 
 
-test()
+if __name__ == '__main__':
+    test()
