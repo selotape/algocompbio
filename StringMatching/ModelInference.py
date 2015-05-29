@@ -1,11 +1,8 @@
-from copy import deepcopy
 from pprint import PrettyPrinter
 from collections import defaultdict
 
 from Viterbi import viterbi
 
-
-__author__ = 'ronvis'
 
 
 # ##CONSTANTS###
@@ -69,22 +66,19 @@ def sufficient_emission_statistics(states, alphabet, path, X):
     return Ne
 
 
-def viterbi_inference(X, S, E, T, alphabet):
-    E1, T1 = deepcopy((E, T))
-    E2, T2 = deepcopy((E, T))
-    states = E1.keys()
+def viterbi_inference(X, S, E, T, alphabet, states):
+    last_logprob, last_path = viterbi(X, states, S, T, E)
+    print last_logprob, last_path
+    current_logprob, current_path = 0, []
 
-    logprob1, path1 = viterbi(X, states, S, T, E)
-    logprob2, path2 = 0, []
+    while last_logprob != current_logprob:
+        last_logprob = current_logprob
 
-    while logprob1 != logprob2:
-        logprob1 = logprob2
-        Nt = sufficient_transition_statistics(states, path1)
-        Ne = sufficient_emission_statistics(states, alphabet, path1, X)
-        logprob2, path2 = viterbi(X, states, S, Nt, Ne)
+        Nt = sufficient_transition_statistics(states, last_path)
+        Ne = sufficient_emission_statistics(states, alphabet, last_path, X)
+        current_logprob, current_path = viterbi(X, states, S, Nt, Ne)
 
-        pprint(Ne)
-        pprint(Nt)
+        print current_logprob, current_path
 
     return Ne, Nt
 
@@ -93,10 +87,10 @@ def baum_welch_inference(X, S, E, T, sigma):
     pass
 
 
-def infer_model(method, X, S, E, T, alphabet, sigma=DEFAULT_MARGIN):
+def infer_model(method, X, S, E, T, alphabet, states, sigma=DEFAULT_MARGIN):
 
     if ('viterbi' == method):
-        E, T = viterbi_inference(X, S, E, T, alphabet)
+        E, T = viterbi_inference(X, S, E, T, alphabet, states)
     elif 'baum-welch' == method:
         E, T = baum_welch_inference(X, S, E, T, sigma)
     else:
@@ -104,33 +98,52 @@ def infer_model(method, X, S, E, T, alphabet, sigma=DEFAULT_MARGIN):
     return E, T
 
 
-def test_inferences():
-    method = VITERBI
-
+def test_inferences(method):
     alphabet = ['0', '1']
 
-    X = '11010011110101010111100011010011010010101101010101000101010101010010101010110101010000001100000011000000110'
+    X = '11111111111111100000000000000000000111000000111111111111111000000000000'
 
-    S = {'Trns0': 0.499999, 'Trns1': 0.499999, 'Bckg0': 0.000001, 'Bckg1': 0.000001}
+    S = {'T0': 0.5, 'T1': 0.5, 'B0': 0.0, 'B1': 0.0}
+
+    states = S.keys()
 
     T = {
-        'Trns0': {'Trns0': 0.9 * 0.7, 'Trns1': 0.9 * 0.3, 'Bckg0': 0.099999, 'Bckg1': 0.000001},
-        'Trns1': {'Trns0': 0.9 * 0.1, 'Trns1': 0.9 * 0.9, 'Bckg0': 0.000001, 'Bckg1': 0.1},
-        'Bckg0': {'Trns0': 0.8 * 0.7, 'Trns1': 0.8 * 0.3, 'Bckg0': 0.199999, 'Bckg1': 0.000001},
-        'Bckg1': {'Trns0': 0.8 * 0.1, 'Trns1': 0.8 * 0.9, 'Bckg0': 0.000001, 'Bckg1': 0.199999}
+        'T0': {'T0': 0.8, 'T1': 0.1, 'B0': 0.1, 'B1': 0.0},
+        'T1': {'T0': 0.1, 'T1': 0.6, 'B0': 0.0, 'B1': 0.3},
+        'B0': {'T0': 0.8, 'T1': 0.1, 'B0': 0.1, 'B1': 0.0},
+        'B1': {'T0': 0.1, 'T1': 0.8, 'B0': 0.0, 'B1': 0.1}
     }
 
     E = {
-        'Trns0': {'0': 0.75, '1': 0.2, 's': 0.05},
-        'Trns1': {'0': 0.2, '1': 0.75, 's': 0.05},
-        'Bckg0': {'0': 0.5, '1': 0.499999, 's': 0.000001},
-        'Bckg1': {'0': 0.5, '1': 0.499999, 's': 0.000001}
+        'T0': {'0': 0.9, '1': 0.1},
+        'T1': {'0': 0.1, '1': 0.9},
+        'B0': {'0': 0.5, '1': 0.5},
+        'B1': {'0': 0.5, '1': 0.5}
     }
 
-    E, T = infer_model(method, X, S, E, T, alphabet)
+    E, T = infer_model(method, X, S, E, T, alphabet, states)
+    print "Emmissions:"
     pprint(E)
+    print "Transitions:"
     pprint(T)
 
 
-test_inferences()
+if __name__ == '__main__':
+    chosen_method = VITERBI
+    test_inferences(chosen_method)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

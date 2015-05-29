@@ -1,4 +1,3 @@
-__author__ = 'Wikipedia'
 from math import fsum, exp
 
 from Helper import log0
@@ -68,7 +67,7 @@ def forward_viterbi(obs, states, start_p, trans_p, emit_p):
     # print '===prob scale==='
     # for t in range(0, len(obs)):
     # for y in states:
-    #         V_exp[t][y] = exp(V[t][y])
+    # V_exp[t][y] = exp(V[t][y])
     # print_dptable(V_exp)
 
 
@@ -96,14 +95,11 @@ def noise_and_null_viterbi(obs, states, start_p, trans_p, emit_p, total_emits):
                 # best_with_transmission  =  max(  trans_p[][]*  for p in range(u))
                 best_with_transmission = None
 
-
-
                 V[t][y][u] = max(best_with_noise, best_with_sigma, best_with_transmission)
     return 0
 
 
 def example_viterbi():
-
     observations = '11011000'
 
     start_probability = {'Trns0': 0.499999, 'Trns1': 0.499999, 'Bckg0': 0.000001, 'Bckg1': 0.000001}
