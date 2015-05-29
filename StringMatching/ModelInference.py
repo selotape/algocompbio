@@ -33,12 +33,12 @@ def sufficient_transition_statistics(states, path):
     for a in states:
         total_appearances = sum(Nt[a].values())
 
-        if total_appearances:
-            for b in states:
+        for b in states:
+            if total_appearances:
                 Nt[a][b] = float(Nt[a][b]) / total_appearances
-        else:  # when the state is unobserved we'll arbitrarily assign equal transition probabilities
-            for b in states:
+            else:  # when the state is unobserved we'll arbitrarily assign equal transition probabilities
                 Nt[a][b] = 1.0 / len(states)
+        Nt[a] = dict(Nt[a])
 
     # print 'path:', path
     # print 'Nt', Nt
@@ -58,14 +58,16 @@ def sufficient_emission_statistics(states, alphabet, path, X):
     # normalize
     for state in states:
         total_appearances = sum(Ne[state].values())
-
-        if total_appearances:
-            for char in alphabet:
+        for char in alphabet:
+            if total_appearances:
                 Ne[state][char] = float(Ne[state][char]) / total_appearances
-        else:  # when the state is unobserved we'll arbitrarily assign equal transition probabilities
-            for char in alphabet:
+            else:  # when the state is unobserved we'll arbitrarily assign equal transition probabilities
                 Ne[state][char] = 1.0 / len(alphabet)
+        Ne[state] = dict(Ne[state])
 
+    # print 'path:', path
+    # print 'X:', X
+    # print 'Ne', Ne
     return Ne
 
 
