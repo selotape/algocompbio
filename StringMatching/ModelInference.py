@@ -36,18 +36,40 @@ def sufficient_transition_statistics(states, path):
         if total_appearances:
             for b in states:
                 Nt[a][b] = float(Nt[a][b]) / total_appearances
-        else:  # this state is unobserved so we'll arbitrarily assign equal transition probabilities
+        else:  # when the state is unobserved we'll arbitrarily assign equal transition probabilities
             for b in states:
                 Nt[a][b] = 1.0 / len(states)
 
+    # print 'path:', path
+    # print 'Nt', Nt
     return Nt
 
 
-def sufficient_emission_statistics(states, path, X):
-    pass
+def sufficient_emission_statistics(states, alphabet, path, X):
+    # init
+    Ne = {}
+    for state in states:
+        Ne[state] = defaultdict(int)
+
+    # calculate
+    for state, emit in zip(path, X):
+        Ne[state][emit] += 1
+
+    # normalize
+    for state in states:
+        total_appearances = sum(Ne[state].values())
+
+        if total_appearances:
+            for char in alphabet:
+                Ne[state][char] = float(Ne[state][char]) / total_appearances
+        else:  # when the state is unobserved we'll arbitrarily assign equal transition probabilities
+            for char in alphabet:
+                Ne[state][char] = 1.0 / len(alphabet)
+
+    return Ne
 
 
-def viterbi_inference(X, S, E, T):
+def viterbi_inference(X, S, E, T, alphabet):
     E1, T1 = deepcopy((E, T))
     E2, T2 = deepcopy((E, T))
     states = E1.keys()
@@ -57,7 +79,7 @@ def viterbi_inference(X, S, E, T):
 
     while logprob1 != logprob2:
         Nt = sufficient_transition_statistics(states, path1)
-        Ne = sufficient_emission_statistics(states, path1, X)
+        Ne = sufficient_emission_statistics(states, alphabet, path1, X)
         # E1, T1 = normalize(Nt, Ne)
         # logprob1, path1 = viterbi(X, states, S, T1, E1)
 
@@ -69,10 +91,10 @@ def baum_welch_inference(X, S, E, T, sigma):
     pass
 
 
-def infer_model(X, method, S, E, T, sigma=DEFAULT_MARGIN):
+def infer_model(method, X, S, E, T, alphabet, sigma=DEFAULT_MARGIN):
 
     if ('viterbi' == method):
-        E, T = viterbi_inference(X, S, E, T)
+        E, T = viterbi_inference(X, S, E, T, alphabet)
     elif 'baum-welch' == method:
         E, T = baum_welch_inference(X, S, E, T, sigma)
     else:
@@ -82,6 +104,8 @@ def infer_model(X, method, S, E, T, sigma=DEFAULT_MARGIN):
 
 def test_inferences():
     method = VITERBI
+
+    alphabet = ['0', '1']
 
     X = '11010011110101010111100011010011010010101101010101000101010101010010101010110101010000001100000011000000110'
 
@@ -101,7 +125,7 @@ def test_inferences():
         'Bckg1': {'0': 0.5, '1': 0.499999, 's': 0.000001}
     }
 
-    E, T = infer_model(X, method, S, E, T)
+    E, T = infer_model(method, X, S, E, T, alphabet)
     # pprint(E)
     # pprint(T)
 
