@@ -36,7 +36,7 @@ def viterbi(obs, states, start_p, trans_p, emit_p):
         # Don't need to remember the old paths
         path = newpath
 
-    print_dptable(V)
+    # print_dptable(V)
     (logprob, state) = max((V[t][y], y) for y in states)
     return (logprob, path[state])
 
@@ -91,6 +91,7 @@ def noise_and_null_viterbi(obs, states, start_p, trans_p, emit_p, total_emits):
                 best_with_sigma = 0
                 best_with_noise = 0
                 # best_with_transmission  =  max(  trans_p[][]*  for p in range(u))
+                best_with_transmission = None
 
 
 
@@ -204,5 +205,5 @@ def example_sigmaII():
                                   8)
 
 
-print("result: " + str(example_sigmaII()))
+# print("result: " + str(example_viterbi()))
 

@@ -1,6 +1,10 @@
 from copy import deepcopy
 from sys import maxint
 from pprint import PrettyPrinter
+from collections import defaultdict
+
+from Viterbi import viterbi
+
 
 __author__ = 'ronvis'
 
@@ -8,39 +12,57 @@ __author__ = 'ronvis'
 # ##CONSTANTS###
 DEFAULT_MARGIN = 0.005
 VITERBI = 'viterbi'
-BAUMWELCH = 'baum-welch'
+BAUM_WELCH = 'baum-welch'
 MIN_INF = -maxint
 
 pprint = PrettyPrinter(indent=4).pprint
 
 
-def viterbiInference(X, S, E, T):
-    E_, T_ = deepcopy((E, T))
+def sufficient_transition_statistics(states, path):
+    N = defaultdict()
 
-    print id(E), id(E_)
+    print 'N', N
+    return N
 
-    return E_, T_
 
-
-def baumWelchInference(X, S, E, T, sigma):
+def sufficient_emission_statistics(states, path, X):
     pass
 
 
-def inferModel(X, method, S, E, T, sigma=DEFAULT_MARGIN):
-    """
+def viterbi_inference(X, S, E, T):
+    E1, T1 = deepcopy((E, T))
+    E2, T2 = deepcopy((E, T))
+    states = E1.keys()
 
-    :rtype : object
-    """
+    logprob1, path1 = viterbi(X, states, S, T, E)
+    logprob2, path2 = 0, []
+
+    while logprob1 != logprob2:
+        Nt = sufficient_transition_statistics(states, path1)
+        # Ne = sufficient_emission_statistics(states, path1, X)
+        # E1, T1 = normalize(Nt, Ne)
+        # logprob1, path1 = viterbi(X, states, S, T1, E1)
+
+        logprob1 = logprob2
+    return E1, T1
+
+
+def baum_welch_inference(X, S, E, T, sigma):
+    pass
+
+
+def infer_model(X, method, S, E, T, sigma=DEFAULT_MARGIN):
+
     if ('viterbi' == method):
-        E, T = viterbiInference(X, S, E, T)
+        E, T = viterbi_inference(X, S, E, T)
     elif 'baum-welch' == method:
-        E, T = baumWelchInference(X, S, E, T, sigma)
+        E, T = baum_welch_inference(X, S, E, T, sigma)
     else:
         raise NotImplementedError("This algorithm is yet to be invented.")
     return E, T
 
 
-def testInferences():
+def test_inferences():
     method = VITERBI
 
     X = '1101000'
@@ -61,10 +83,10 @@ def testInferences():
         'Bckg1': {'0': 0.5, '1': 0.499999, 's': 0.000001}
     }
 
-    E, T = inferModel(X, method, S, E, T)
-    pprint(E)
-    pprint(T)
+    E, T = infer_model(X, method, S, E, T)
+    # pprint(E)
+    # pprint(T)
 
 
-testInferences()
+test_inferences()
 
