@@ -24,7 +24,6 @@ def viterbi(obs, states, start_p, trans_p, emit_p):
         V[0][y] = log0(start_p[y] * emit_p[y][obs[0]])
         path[y] = [y]
 
-
     # Run Viterbi for t > 0
     for t in range(1, len(obs)):
         V.append({})
