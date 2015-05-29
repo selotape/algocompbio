@@ -5,12 +5,10 @@ from Viterbi import viterbi
 
 
 
-
 # ##CONSTANTS###
 DEFAULT_MARGIN = 0.005
 VITERBI = 'viterbi'
 BAUM_WELCH = 'baum-welch'
-
 pprint = PrettyPrinter(indent=4).pprint
 
 
