@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7e185df8-ed71-4498-bfd7-e701e526f387" name="Default" comment="developed">
+    <list default="true" id="7e185df8-ed71-4498-bfd7-e701e526f387" name="Default" comment=" developed sufficient_transition_statistics_baumwelch.&#10; still untested!">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StringMatching/HmmInferenceBaumWelch.py" afterPath="$PROJECT_DIR$/StringMatching/HmmInferenceBaumWelch.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StringMatching/ModelInference.py" afterPath="$PROJECT_DIR$/StringMatching/ModelInference.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StringMatching/Viterbi.py" afterPath="$PROJECT_DIR$/StringMatching/Viterbi.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="NeedlemanWunch.iws" />
@@ -22,7 +24,7 @@
     <SUITE FILE_PATH="coverage/NeedlemanWunch$NeedlemanWunsch__1_.coverage" NAME="NeedlemanWunsch (1) Coverage Results" MODIFIED="1430944157740" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/StringMatching" />
     <SUITE FILE_PATH="coverage/NeedlemanWunch$SmithWaterman.coverage" NAME="SmithWaterman Coverage Results" MODIFIED="1429906938788" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/StringMatching" />
     <SUITE FILE_PATH="coverage/NeedlemanWunch$SWTester.coverage" NAME="SWTester Coverage Results" MODIFIED="1429905046358" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/StringMatching" />
-    <SUITE FILE_PATH="coverage/NeedlemanWunch$ModelInference.coverage" NAME="ModelInference Coverage Results" MODIFIED="1432987265464" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/StringMatching" />
+    <SUITE FILE_PATH="coverage/NeedlemanWunch$ModelInference.coverage" NAME="ModelInference Coverage Results" MODIFIED="1432993180966" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/StringMatching" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -38,8 +40,8 @@
             <file leaf-file-name="HmmInferenceViterbi.py" pinned="false" current="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/StringMatching/HmmInferenceViterbi.py">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state vertical-scroll-proportion="0.4349277" vertical-offset="0" max-vertical-offset="952">
-                    <caret line="23" column="62" selection-start-line="23" selection-start-column="62" selection-end-line="23" selection-end-column="62" />
+                  <state vertical-scroll-proportion="0.1701891" vertical-offset="0" max-vertical-offset="952">
+                    <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
                     <folding>
                       <element signature="e#22#57#0" expanded="true" />
                       <element signature="e#856#1532#0" expanded="false" />
@@ -59,14 +61,27 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="HmmInferenceBaumWelch.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="HmmInferenceBaumWelch.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/StringMatching/HmmInferenceBaumWelch.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.111292966" vertical-offset="34" max-vertical-offset="1088">
-              <caret line="6" column="46" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="46" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1020">
+              <caret line="16" column="44" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider editor-type-id="MarkdownPreviewEditor">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-1.59375" vertical-offset="0" max-vertical-offset="170">
+              <caret line="3" column="72" selection-start-line="3" selection-start-column="72" selection-end-line="3" selection-end-column="72" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -75,7 +90,7 @@
         <entry file="file://$PROJECT_DIR$/StringMatching/ModelInference.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1411">
-              <caret line="21" column="30" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
+              <caret line="43" column="5" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -83,15 +98,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Viterbi.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Viterbi.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/StringMatching/Viterbi.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.5454545" vertical-offset="17" max-vertical-offset="2890">
-              <caret line="13" column="12" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
+            <state vertical-scroll-proportion="0.77120316" vertical-offset="918" max-vertical-offset="3162">
+              <caret line="83" column="0" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
               <folding>
-                <element signature="e#138#335#0" expanded="false" />
-                <element signature="e#4980#5986#0" expanded="false" />
-                <element signature="e#6016#7133#0" expanded="false" />
+                <element signature="e#0#26#0" expanded="true" />
+                <element signature="e#174#371#0" expanded="false" />
+                <element signature="e#5603#6609#0" expanded="false" />
+                <element signature="e#6639#7756#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -128,17 +144,19 @@
         <option value="$PROJECT_DIR$/StringMatching/SmithWaterman.py" />
         <option value="$PROJECT_DIR$/StringMatching/Helper.py" />
         <option value="$PROJECT_DIR$/StringMatching/__init__.py" />
-        <option value="$PROJECT_DIR$/StringMatching/Viterbi.py" />
         <option value="$PROJECT_DIR$/StringMatching/HmmInferenceViterbi.py" />
+        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/StringMatching/ModelInference.py" />
         <option value="$PROJECT_DIR$/StringMatching/HmmInferenceBaumWelch.py" />
+        <option value="$PROJECT_DIR$/StringMatching/Viterbi.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="960" />
-    <option name="width" value="960" />
-    <option name="height" value="1032" />
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
+    <option name="width" value="1938" />
+    <option name="height" value="1050" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -641,7 +659,11 @@
       <created>1432987215753</created>
       <updated>1432987215753</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary=" developed sufficient_transition_statistics_baumwelch.&#10; still untested!">
+      <created>1432992524016</created>
+      <updated>1432992524016</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -665,21 +687,21 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="960" y="0" width="960" height="1032" extended-state="0" />
+    <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32777777" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3288889" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33673468" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32666665" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32666665" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25882354" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19506727" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21122995" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39777777" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25510204" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3288889" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -705,7 +727,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="test gitiness" />
     <MESSAGE value="improved printing (to csv format)" />
     <MESSAGE value="removed tester files and extracted printCsv to helper" />
     <MESSAGE value="renamed some variables" />
@@ -730,7 +751,8 @@
     <MESSAGE value="tried to tidy ModelInference" />
     <MESSAGE value="added TODOs and prepared for tomorrow" />
     <MESSAGE value="separated baum-welch and viterbi inference to different files" />
-    <option name="LAST_COMMIT_MESSAGE" value="separated baum-welch and viterbi inference to different files" />
+    <MESSAGE value=" developed sufficient_transition_statistics_baumwelch.&#10; still untested!" />
+    <option name="LAST_COMMIT_MESSAGE" value=" developed sufficient_transition_statistics_baumwelch.&#10; still untested!" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -788,9 +810,10 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="782" max-vertical-offset="1411">
           <caret line="177" column="0" selection-start-line="177" selection-start-column="0" selection-end-line="177" selection-end-column="0" />
           <folding>
-            <element signature="e#138#335#0" expanded="false" />
-            <element signature="e#4980#5986#0" expanded="false" />
-            <element signature="e#6016#7133#0" expanded="false" />
+            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#174#371#0" expanded="false" />
+            <element signature="e#5603#6609#0" expanded="false" />
+            <element signature="e#6639#7756#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -824,9 +847,10 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="884" max-vertical-offset="1377">
           <caret line="52" column="30" selection-start-line="52" selection-start-column="30" selection-end-line="52" selection-end-column="30" />
           <folding>
-            <element signature="e#138#335#0" expanded="false" />
-            <element signature="e#4980#5986#0" expanded="false" />
-            <element signature="e#6016#7133#0" expanded="false" />
+            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#174#371#0" expanded="false" />
+            <element signature="e#5603#6609#0" expanded="false" />
+            <element signature="e#6639#7756#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -860,9 +884,10 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="595" max-vertical-offset="1649">
           <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
           <folding>
-            <element signature="e#138#335#0" expanded="false" />
-            <element signature="e#4980#5986#0" expanded="false" />
-            <element signature="e#6016#7133#0" expanded="false" />
+            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#174#371#0" expanded="false" />
+            <element signature="e#5603#6609#0" expanded="false" />
+            <element signature="e#6639#7756#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -979,16 +1004,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.07083333" vertical-offset="0" max-vertical-offset="480">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/StringMatching/Helper.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1173">
@@ -1039,22 +1054,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/StringMatching/Viterbi.py">
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.5454545" vertical-offset="17" max-vertical-offset="2890">
-          <caret line="13" column="12" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
-          <folding>
-            <element signature="e#138#335#0" expanded="false" />
-            <element signature="e#4980#5986#0" expanded="false" />
-            <element signature="e#6016#7133#0" expanded="false" />
-          </folding>
+        <state vertical-scroll-proportion="-1.59375" vertical-offset="0" max-vertical-offset="170">
+          <caret line="3" column="72" selection-start-line="3" selection-start-column="72" selection-end-line="3" selection-end-column="72" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/StringMatching/ModelInference.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1411">
-          <caret line="21" column="30" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
+          <caret line="43" column="5" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
@@ -1063,8 +1077,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/StringMatching/HmmInferenceViterbi.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4349277" vertical-offset="0" max-vertical-offset="952">
-          <caret line="23" column="62" selection-start-line="23" selection-start-column="62" selection-end-line="23" selection-end-column="62" />
+        <state vertical-scroll-proportion="0.1701891" vertical-offset="0" max-vertical-offset="952">
+          <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
           <folding>
             <element signature="e#22#57#0" expanded="true" />
             <element signature="e#856#1532#0" expanded="false" />
@@ -1074,10 +1088,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/StringMatching/HmmInferenceBaumWelch.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.111292966" vertical-offset="34" max-vertical-offset="1088">
-          <caret line="6" column="46" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="46" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1020">
+          <caret line="16" column="44" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/StringMatching/Viterbi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.77120316" vertical-offset="918" max-vertical-offset="3162">
+          <caret line="83" column="0" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#174#371#0" expanded="false" />
+            <element signature="e#5603#6609#0" expanded="false" />
+            <element signature="e#6639#7756#0" expanded="false" />
           </folding>
         </state>
       </provider>

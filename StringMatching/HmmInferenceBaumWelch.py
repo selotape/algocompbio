@@ -14,14 +14,15 @@ def sufficient_transition_statistics_baumwelch(states, F, B, T, E, X):
     # calculate
     for j in states:
         for l in states:
-            E_Nt[j][l] = T[j][l] * sum(F[i][j] * E[l][X[i + 1] * B[i + 1][l]] for i in len(X)) / (
-            sum(F[len(X)][j_] for j_ in states))
+            E_Nt[j][l] = T[j][l] * sum(
+                F[i][j] * E[l][X[i + 1] * B[i + 1][l]] for i in len(X))  # / (sum(F[len(X)][j_] for j_ in states))
 
 
-    # normalize (OR SHOULD YOU???)
+    # normalize
     for j in states:
+        column_sum = sum(E_Nt[j][i] for i in states)
         for l in states:
-            E_Nt[j][l] = E_Nt[j][l] / sum(E_Nt[j][i] for i in states)
+            E_Nt[j][l] = E_Nt[j][l] / column_sum
 
     return E_Nt
 

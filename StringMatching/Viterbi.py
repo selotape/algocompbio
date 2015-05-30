@@ -1,6 +1,8 @@
 from math import fsum, exp
+from collections import defaultdict
 
 from Helper import log0
+
 
 
 
@@ -75,12 +77,27 @@ def forward_viterbi(obs, states, start_p, trans_p, emit_p):
 
 
 def backward_viterbi(obs, states, start_p, trans_p, emit_p):
-    # TODO - implement backward [?]viterbi which returns the dp matrix
+    V = defaultdict(dict)
 
-    prob = None
-    V = None
+    # Initialize base cases (t == n)
+    for y in states:
+        V[len(obs)][y] = log0(1)  # my_log(emit_p[y][obs[-1]])
 
-    return prob, V
+    # Run Viterbi for t < n
+    for t in reversed(range(1, len(obs))):
+        for y in states:
+            max_a = max(V[t + 1][y0] + log0(trans_p[y][y0]) + log0(emit_p[y0][obs[t]]) for y0 in states)
+
+            sum = 0
+            for y0 in states:
+                sum += exp(V[t + 1][y0] + log0(trans_p[y][y0]) + log0(emit_p[y0][obs[t]]) - max_a)
+
+            prob = log0(sum) + max_a
+            V[t][y] = prob
+
+    # print_dptable(V)
+    likelihood = fsum(exp(y) * start_p[x] * emit_p[x][obs[0]] for x, y in V[1].iteritems())
+    return (V, likelihood)
 
 
 def noise_and_null_viterbi(obs, states, start_p, trans_p, emit_p, total_emits):

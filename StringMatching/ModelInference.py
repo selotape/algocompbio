@@ -25,11 +25,12 @@ def infer_model(method, X, S, E, T, alphabet, states, sigma=_DEFAULT_MARGIN):
 
 
 def test_inferences():
-    method = _BAUM_WELCH
+    # method = _BAUM_WELCH
+    method = _VITERBI
 
     alphabet = ['0', '1']
 
-    X = '11111111111111100000000000000000000111000000111111111111111000000000000'
+    X = '1110111010100000010101011111001000000'
 
     S = {'T0': 0.5, 'T1': 0.5, 'B0': 0.0, 'B1': 0.0}
 
