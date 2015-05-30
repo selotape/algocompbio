@@ -7,26 +7,25 @@ from HmmInferenceBaumWelch import baum_welch_inference
 
 
 # # # CONSTANTS # # #
-DEFAULT_MARGIN = 0.005
-VITERBI = 'viterbi'
-BAUM_WELCH = 'baum-welch'
+_DEFAULT_MARGIN = 0.005
+_VITERBI = 'viterbi'
+_BAUM_WELCH = 'baum-welch'
 pprint = PrettyPrinter(indent=4).pprint
 
 
-
-def infer_model(method, X, S, E, T, alphabet, states, sigma=DEFAULT_MARGIN):
+def infer_model(method, X, S, E, T, alphabet, states, sigma=_DEFAULT_MARGIN):
 
     if ('viterbi' == method):
         E, T = viterbi_inference(X, S, E, T, alphabet, states)
     elif 'baum-welch' == method:
-        E, T = baum_welch_inference(X, S, E, T, sigma)
+        E, T = baum_welch_inference(X, S, E, T, sigma, alphabet, states)
     else:
-        raise NotImplementedError("algorithm " + method + " is yet to be invented.")
+        raise NotImplementedError("algorithm \'%s\' is yet to be invented." % method)
     return E, T
 
 
 def test_inferences():
-    method = VITERBI
+    method = _BAUM_WELCH
 
     alphabet = ['0', '1']
 
