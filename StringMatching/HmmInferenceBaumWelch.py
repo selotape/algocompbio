@@ -1,4 +1,3 @@
-from collections import defaultdict
 from pprint import PrettyPrinter
 
 from Helper import init_dict_matrix
@@ -31,10 +30,11 @@ def sufficient_transition_statistics_baumwelch(states, F, B, T, E, X):
 def sufficient_emission_statistics_baumwelch(states, alphabet, F, B, T, E, X):
     E_Ne = init_dict_matrix(states, alphabet, 0)
 
-    indices = defaultdict(list)
+    indices = dict.fromkeys(alphabet)
+    for c in alphabet:
+        indices[c] = []
     for i in range(len(X)):
         indices[X[i]].append(i)
-    indices = dict(indices)
 
     for j in states:
         for c in alphabet:
@@ -68,4 +68,4 @@ def baum_welch_inference(X, S, E, T, sigma, alphabet, states):
         current_log_likelihood = log0(current_likelihood)
         print current_log_likelihood
 
-    return Nt, Ne
+    return Ne, Nt
