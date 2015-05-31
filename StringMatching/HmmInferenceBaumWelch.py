@@ -34,9 +34,6 @@ def sufficient_emission_statistics_baumwelch(states, alphabet, F, B, T, E, X):
     for i in range(len(X)):
         indices[X[i]].append(i)
 
-    pprint(indices)
-    exit()
-
     for j in states:
         for c in alphabet:
             E_Ne[j][c] = sum(F[i][j] * B[i][j] for i in indices[c])

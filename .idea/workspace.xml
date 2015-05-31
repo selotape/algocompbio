@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7e185df8-ed71-4498-bfd7-e701e526f387" name="Default" comment="fuck me">
+    <list default="true" id="7e185df8-ed71-4498-bfd7-e701e526f387" name="Default" comment="better">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StringMatching/HmmInferenceBaumWelch.py" afterPath="$PROJECT_DIR$/StringMatching/HmmInferenceBaumWelch.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -38,8 +38,8 @@
       <file leaf-file-name="HmmInferenceBaumWelch.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/StringMatching/HmmInferenceBaumWelch.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.37443608" vertical-offset="609" max-vertical-offset="2002">
-              <caret line="33" column="27" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="27" />
+            <state vertical-scroll-proportion="0.33533835" vertical-offset="713" max-vertical-offset="1924">
+              <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -660,7 +660,11 @@
       <created>1433111429011</created>
       <updated>1433111429011</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="better">
+      <created>1433111598109</created>
+      <updated>1433111598109</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -724,7 +728,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="finished sumHomology." />
     <MESSAGE value="Added implementation of viterbi from wikipedia" />
     <MESSAGE value="Added implementation of Viterbi from wikipedia" />
     <MESSAGE value="changed Viterbi to use log-probabilities for better accuracy" />
@@ -749,7 +752,8 @@
     <MESSAGE value="completed expected emission sufficient statistics.&#10;&#10;but it's buggy.&#10;&#10;so still no-go." />
     <MESSAGE value="sleepybye" />
     <MESSAGE value="fuck me" />
-    <option name="LAST_COMMIT_MESSAGE" value="fuck me" />
+    <MESSAGE value="better" />
+    <option name="LAST_COMMIT_MESSAGE" value="better" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -1161,8 +1165,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/StringMatching/HmmInferenceBaumWelch.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37443608" vertical-offset="609" max-vertical-offset="2002">
-          <caret line="33" column="27" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="27" />
+        <state vertical-scroll-proportion="0.33533835" vertical-offset="713" max-vertical-offset="1924">
+          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
