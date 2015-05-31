@@ -7,9 +7,6 @@ from Viterbi import forward_viterbi
 from Viterbi import backward_viterbi
 
 
-
-
-
 # TODO - remove after debug print are removed.
 pprint = PrettyPrinter(indent=4).pprint
 
