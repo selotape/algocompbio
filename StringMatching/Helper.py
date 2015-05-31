@@ -60,3 +60,12 @@ def print_dp(V):
 
 def generate_score_function(xx, xy, x_):
     return score_function(xx, xy, x_).score
+
+
+def init_dict_matrix(rows, columns, default):
+    M = {}
+    for a in rows:
+        M[a] = {}
+        for b in columns:
+            M[a][b] = default
+    return M

@@ -25,8 +25,8 @@ def infer_model(method, X, S, E, T, alphabet, states, sigma=_DEFAULT_MARGIN):
 
 
 def test_inferences():
-    # method = _BAUM_WELCH
-    method = _VITERBI
+    method = _BAUM_WELCH
+    # method = _VITERBI
 
     alphabet = ['0', '1']
 

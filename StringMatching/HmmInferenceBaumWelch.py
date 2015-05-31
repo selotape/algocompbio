@@ -1,22 +1,26 @@
+from collections import defaultdict
+from pprint import PrettyPrinter
+
+from Helper import init_dict_matrix
+from Helper import MIN_INF, log0
 from Viterbi import forward_viterbi
 from Viterbi import backward_viterbi
 
 
-def sufficient_transition_statistics_baumwelch(states, F, B, T, E, X):
-    # init
-    E_Nt = {}
-    for a in states:
-        E_Nt[a] = {}
-        for b in states:
-            E_Nt[a][b] = 0
 
+
+
+# TODO - remove after debug print are removed.
+pprint = PrettyPrinter(indent=4).pprint
+
+
+def sufficient_transition_statistics_baumwelch(states, F, B, T, E, X):
+    E_Nt = init_dict_matrix(states, states, 0)
 
     # calculate
     for j in states:
         for l in states:
-            E_Nt[j][l] = T[j][l] * sum(
-                F[i][j] * E[l][X[i + 1] * B[i + 1][l]] for i in len(X))  # / (sum(F[len(X)][j_] for j_ in states))
-
+            E_Nt[j][l] = T[j][l] * sum((F[i][j] * E[l][X[i + 1]] * B[i + 1][l]) for i in range(1, len(X) - 1))
 
     # normalize
     for j in states:
@@ -28,28 +32,43 @@ def sufficient_transition_statistics_baumwelch(states, F, B, T, E, X):
 
 
 def sufficient_emission_statistics_baumwelch(states, alphabet, F, B, T, E, X):
-    pass
+    E_Ne = init_dict_matrix(states, alphabet, 0)
+
+    indices = defaultdict(list)
+    for i in range(len(X)):
+        indices[X[i]].append(i)
+    indices = dict(indices)
+
+    for j in states:
+        for c in alphabet:
+            E_Ne[j][c] = sum(F[i][j] * B[i][j] for i in indices[c])
+
+    # normalize
+    for j in states:
+        column_sum = sum(E_Ne[j][c] for c in alphabet)
+        for c in alphabet:
+            E_Ne[j][c] = E_Ne[j][c] / column_sum
+
+    return E_Ne
 
 
 def baum_welch_inference(X, S, E, T, sigma, alphabet, states):
-    # calculate likelihood
+    current_log_likelihood = MIN_INF + 1
+    last_log_likelihood = MIN_INF
 
-    last_likelihood = 0
-    current_likelihood = 0
+    while ( current_log_likelihood - last_log_likelihood > sigma ):
+        last_log_likelihood = current_log_likelihood
 
-    while (
-            current_likelihood - last_likelihood > sigma ):  # TODO - instead of equality, change stop condition to rely on the required diff
-        last_likelihood = current_likelihood
-
-        F = forward_viterbi(X, S, E, T)
-        B = backward_viterbi(X, S, E, T)
+        F = forward_viterbi(X, states, S, T, E)[0]
+        B, current_likelihood = backward_viterbi(X, states, S, T, E)
 
         Nt = sufficient_transition_statistics_baumwelch(states, F, B, T, E, X)
         Ne = sufficient_emission_statistics_baumwelch(states, alphabet, F, B, T, E, X)
 
-        # calc current_likelihood
-
         T = Nt
         E = Ne
 
-    pass
+        current_log_likelihood = log0(current_likelihood)
+        print current_log_likelihood
+
+    return Nt, Ne
