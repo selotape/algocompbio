@@ -30,11 +30,12 @@ def sufficient_transition_statistics_baumwelch(states, F, B, T, E, X):
 def sufficient_emission_statistics_baumwelch(states, alphabet, F, B, T, E, X):
     E_Ne = init_dict_matrix(states, alphabet, 0)
 
-    indices = dict.fromkeys(alphabet)
-    for c in alphabet:
-        indices[c] = []
+    indices = {c: [] for c in alphabet}
     for i in range(len(X)):
         indices[X[i]].append(i)
+
+    pprint(indices)
+    exit()
 
     for j in states:
         for c in alphabet:
