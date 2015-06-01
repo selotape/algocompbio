@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7e185df8-ed71-4498-bfd7-e701e526f387" name="Default" comment="Great SUCCESS!!&#10;&#10;i fixed the buggy baum-welch inference.&#10;&#10;also, added pretty printer to match requirements">
+    <list default="true" id="7e185df8-ed71-4498-bfd7-e701e526f387" name="Default" comment="added pretty printer to Viterbi inference">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StringMatching/Helper.py" afterPath="$PROJECT_DIR$/StringMatching/Helper.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StringMatching/HmmInferenceBaumWelch.py" afterPath="$PROJECT_DIR$/StringMatching/HmmInferenceBaumWelch.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StringMatching/HmmInferenceViterbi.py" afterPath="$PROJECT_DIR$/StringMatching/HmmInferenceViterbi.py" />
@@ -41,11 +41,9 @@
       <file leaf-file-name="HmmInferenceBaumWelch.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/StringMatching/HmmInferenceBaumWelch.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1439" max-vertical-offset="2291">
-              <caret line="58" column="50" selection-start-line="58" selection-start-column="50" selection-end-line="58" selection-end-column="50" />
-              <folding>
-                <element signature="e#0#32#0" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.0" vertical-offset="1381" max-vertical-offset="2233">
+              <caret line="56" column="50" selection-start-line="56" selection-start-column="50" selection-end-line="56" selection-end-column="50" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -65,11 +63,11 @@
       <file leaf-file-name="HmmInferenceViterbi.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/StringMatching/HmmInferenceViterbi.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="178" max-vertical-offset="888">
-              <caret line="76" column="8" selection-start-line="76" selection-start-column="8" selection-end-line="76" selection-end-column="8" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="154" max-vertical-offset="864">
+              <caret line="75" column="8" selection-start-line="75" selection-start-column="8" selection-end-line="75" selection-end-column="8" />
               <folding>
-                <element signature="e#202#827#0" expanded="false" />
-                <element signature="e#897#1573#0" expanded="false" />
+                <element signature="e#204#829#0" expanded="false" />
+                <element signature="e#899#1575#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -78,8 +76,8 @@
       <file leaf-file-name="Helper.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/StringMatching/Helper.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4516129" vertical-offset="893" max-vertical-offset="1513">
-              <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.8085586" vertical-offset="625" max-vertical-offset="1513">
+              <caret line="81" column="9" selection-start-line="81" selection-start-column="9" selection-end-line="81" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -710,7 +708,11 @@
       <created>1433197351232</created>
       <updated>1433197351232</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="added pretty printer to Viterbi inference">
+      <created>1433197887333</created>
+      <updated>1433197887333</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -749,7 +751,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36373508" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25882354" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22352941" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29098806" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29098806" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -795,7 +797,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="changed Viterbi to use log-probabilities for better accuracy" />
     <MESSAGE value="completed forward_algorithm without log-scale probability" />
     <MESSAGE value="completed forward_algorithm WITH log-scale probability" />
     <MESSAGE value="created skeleton for two HMM model inference methods" />
@@ -820,7 +821,8 @@
     <MESSAGE value="better" />
     <MESSAGE value="still buggy" />
     <MESSAGE value="Great SUCCESS!!&#10;&#10;i fixed the buggy baum-welch inference.&#10;&#10;also, added pretty printer to match requirements" />
-    <option name="LAST_COMMIT_MESSAGE" value="Great SUCCESS!!&#10;&#10;i fixed the buggy baum-welch inference.&#10;&#10;also, added pretty printer to match requirements" />
+    <MESSAGE value="added pretty printer to Viterbi inference" />
+    <option name="LAST_COMMIT_MESSAGE" value="added pretty printer to Viterbi inference" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -845,9 +847,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="757" max-vertical-offset="1309">
           <caret line="63" column="46" selection-start-line="63" selection-start-column="46" selection-end-line="63" selection-end-column="46" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -883,9 +883,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="1037">
           <caret line="17" column="21" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1213,11 +1211,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/StringMatching/HmmInferenceBaumWelch.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1439" max-vertical-offset="2291">
-          <caret line="58" column="50" selection-start-line="58" selection-start-column="50" selection-end-line="58" selection-end-column="50" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.0" vertical-offset="1381" max-vertical-offset="2233">
+          <caret line="56" column="50" selection-start-line="56" selection-start-column="50" selection-end-line="56" selection-end-column="50" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1233,19 +1229,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/StringMatching/HmmInferenceViterbi.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="178" max-vertical-offset="888">
-          <caret line="76" column="8" selection-start-line="76" selection-start-column="8" selection-end-line="76" selection-end-column="8" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="154" max-vertical-offset="864">
+          <caret line="75" column="8" selection-start-line="75" selection-start-column="8" selection-end-line="75" selection-end-column="8" />
           <folding>
-            <element signature="e#202#827#0" expanded="false" />
-            <element signature="e#897#1573#0" expanded="false" />
+            <element signature="e#204#829#0" expanded="false" />
+            <element signature="e#899#1575#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/StringMatching/Helper.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4516129" vertical-offset="893" max-vertical-offset="1513">
-          <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.8085586" vertical-offset="625" max-vertical-offset="1513">
+          <caret line="81" column="9" selection-start-line="81" selection-start-column="9" selection-end-line="81" selection-end-column="9" />
           <folding />
         </state>
       </provider>

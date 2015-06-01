@@ -3,9 +3,10 @@ import math
 
 from Helper import init_dict_matrix
 from Helper import MIN_INF, log0
-from StringMatching.Helper import printer, print_header
+from StringMatching.Helper import printer, header_printer
 from viterbi_shay import forward
 from viterbi_shay import backward
+
 
 
 
@@ -53,7 +54,7 @@ def baum_welch_inference(X, S, E, T, sigma, alphabet, states):
     last_log_likelihood = MIN_INF
     current_log_likelihood = MIN_INF + 1
 
-    print_header(X)
+    header_printer(X)
     while ( current_log_likelihood - last_log_likelihood > sigma ):
         last_log_likelihood = current_log_likelihood
 

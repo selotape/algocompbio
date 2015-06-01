@@ -79,7 +79,7 @@ def printer(T, E, score):
            T['B1']['T0'], T['B1']['T1'], E['B1']['0'], score)
 
 
-def print_header(X):
+def header_printer(X):
     print ' '.join(X)
     print '------------------------------------------------------------------------------------'
     print "| A->B A->C A->0  : B->A B->D B->0  : C->A C->B C->0  : D->A D->B D->0  :   Score  |"

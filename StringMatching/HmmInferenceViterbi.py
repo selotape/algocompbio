@@ -1,4 +1,4 @@
-from StringMatching.Helper import print_header, printer
+from StringMatching.Helper import header_printer, printer
 
 __author__ = 'ronvis'
 from collections import defaultdict
@@ -63,7 +63,7 @@ def viterbi_inference(X, S, E, T, alphabet, states):
     current_logprob, last_path = viterbi(X, states, S, T, E)
     last_logprob, current_path = 0, []
 
-    print_header(X)
+    header_printer(X)
     while last_logprob != current_logprob:  # TODO - instead of equality, change stop condition to rely on the required diff
         printer(T, E, current_logprob)
 
