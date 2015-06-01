@@ -7,7 +7,7 @@ from HmmInferenceBaumWelch import baum_welch_inference
 
 
 # # # CONSTANTS # # #
-_DEFAULT_MARGIN = 0.005
+_DEFAULT_MARGIN = 0.001
 _VITERBI = 'viterbi'
 _BAUM_WELCH = 'baum-welch'
 pprint = PrettyPrinter(indent=4).pprint
@@ -24,8 +24,8 @@ def infer_model(method, X, S, E, T, alphabet, states, sigma=_DEFAULT_MARGIN):
 
 
 def test_inferences():
-    method = _BAUM_WELCH
-    # method = _VITERBI
+    # method = _BAUM_WELCH
+    method = _VITERBI
 
     alphabet = ['0', '1']
 

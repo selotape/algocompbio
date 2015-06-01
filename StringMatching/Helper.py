@@ -8,7 +8,7 @@ __author__ = 'ronvis'
 
 def log0(x):
     if x == 0:
-        return MIN_INF
+        return float('-inf')
     else:
         return log(x)
 
@@ -69,3 +69,11 @@ def init_dict_matrix(rows, columns, default):
         for b in columns:
             M[a][b] = default
     return M
+
+
+def printer(T, E, score):
+    print "| %.2f %.2f %.2f  : %.2f %.2f %.2f  : %.2f %.2f %.2f  : %.2f %.2f %.2f  : %.4f |" % \
+          (T['T0']['T1'], T['T0']['B0'], E['T0']['0'],
+           T['T1']['T0'], T['T1']['B1'], E['T1']['0'],
+           T['B0']['T1'], T['B0']['T1'], E['B0']['0'],
+           T['B1']['T1'], T['B1']['T1'], E['B1']['0'], score)
