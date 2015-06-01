@@ -1,23 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7e185df8-ed71-4498-bfd7-e701e526f387" name="Default" comment="entirely rearranged package hierarchy.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BioCommon/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HmmInference/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/StringAlignments/__init__.py" />
-      <change type="DELETED" beforePath="C:\Users\ronvis\PycharmProjects\NeedlemanWunch\StringMatching\__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\ronvis\PycharmProjects\NeedlemanWunch\StringMatching\viterbi_shay.py" afterPath="" />
-      <change type="MOVED" beforePath="C:\Users\ronvis\PycharmProjects\NeedlemanWunch\.idea\NeedlemanWunch.iml" afterPath="$PROJECT_DIR$/.idea/ComputationalBiology.iml" />
-      <change type="MOVED" beforePath="C:\Users\ronvis\PycharmProjects\NeedlemanWunch\StringMatching\Helper.py" afterPath="$PROJECT_DIR$/BioCommon/Helper.py" />
-      <change type="MOVED" beforePath="C:\Users\ronvis\PycharmProjects\NeedlemanWunch\StringMatching\HmmInferenceBaumWelch.py" afterPath="$PROJECT_DIR$/HmmInference/HmmInferenceBaumWelch.py" />
-      <change type="MOVED" beforePath="C:\Users\ronvis\PycharmProjects\NeedlemanWunch\StringMatching\HmmInferenceViterbi.py" afterPath="$PROJECT_DIR$/HmmInference/HmmInferenceViterbi.py" />
-      <change type="MOVED" beforePath="C:\Users\ronvis\PycharmProjects\NeedlemanWunch\StringMatching\ModelInference.py" afterPath="$PROJECT_DIR$/HmmInference/ModelInference.py" />
-      <change type="MOVED" beforePath="C:\Users\ronvis\PycharmProjects\NeedlemanWunch\StringMatching\NeedlemanWunsch.py" afterPath="$PROJECT_DIR$/StringAlignments/NeedlemanWunsch.py" />
-      <change type="MOVED" beforePath="C:\Users\ronvis\PycharmProjects\NeedlemanWunch\StringMatching\SmithWaterman.py" afterPath="$PROJECT_DIR$/StringAlignments/SmithWaterman.py" />
-      <change type="MOVED" beforePath="C:\Users\ronvis\PycharmProjects\NeedlemanWunch\StringMatching\SumHomology.py" afterPath="$PROJECT_DIR$/StringAlignments/SumHomology.py" />
-      <change type="MOVED" beforePath="C:\Users\ronvis\PycharmProjects\NeedlemanWunch\StringMatching\Viterbi.py" afterPath="$PROJECT_DIR$/StringAlignments/Viterbi.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="$PROJECT_DIR$/.idea/.name" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+    <list default="true" id="7e185df8-ed71-4498-bfd7-e701e526f387" name="Default" comment="perfect code, prior to adding decet argument parsing">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BioCommon/Helper.py" afterPath="$PROJECT_DIR$/BioCommon/Helper.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HmmInference/HmmInferenceBaumWelch.py" afterPath="$PROJECT_DIR$/HmmInference/HmmInferenceBaumWelch.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HmmInference/HmmInferenceViterbi.py" afterPath="$PROJECT_DIR$/HmmInference/HmmInferenceViterbi.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HmmInference/ModelInference.py" afterPath="$PROJECT_DIR$/HmmInference/ModelInference.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="NeedlemanWunch.iws" />
@@ -32,7 +20,7 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/NeedlemanWunch$SumHomology.coverage" NAME="SumHomology Coverage Results" MODIFIED="1430944770015" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/StringMatching" />
     <SUITE FILE_PATH="coverage/NeedlemanWunch$Viterbi.coverage" NAME="Viterbi Coverage Results" MODIFIED="1432898155089" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/StringMatching" />
-    <SUITE FILE_PATH="coverage/ComputationalBiology$ModelInference__1_.coverage" NAME="ModelInference (1) Coverage Results" MODIFIED="1433198685718" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HmmInference" />
+    <SUITE FILE_PATH="coverage/ComputationalBiology$ModelInference__1_.coverage" NAME="ModelInference Coverage Results" MODIFIED="1433201059388" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HmmInference" />
     <SUITE FILE_PATH="coverage/NeedlemanWunch$main.coverage" NAME="main Coverage Results" MODIFIED="1433193240797" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/StringMatching" />
     <SUITE FILE_PATH="coverage/NeedlemanWunch$NeedlemanWunsch.coverage" NAME="NeedlemanWunsch Coverage Results" MODIFIED="1429904863514" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/StringMatching" />
     <SUITE FILE_PATH="coverage/NeedlemanWunch$SmithWaterman.coverage" NAME="SmithWaterman Coverage Results" MODIFIED="1429906938788" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/StringMatching" />
@@ -52,23 +40,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="HmmInferenceBaumWelch.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HmmInference/HmmInferenceBaumWelch.py">
+      <file leaf-file-name="ModelInference.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/HmmInference/ModelInference.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1360">
-              <caret line="6" column="39" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
-              <folding />
+            <state vertical-scroll-proportion="0.6854839" vertical-offset="0" max-vertical-offset="1887">
+              <caret line="25" column="22" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ModelInference.py" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/HmmInference/ModelInference.py">
+      <file leaf-file-name="HmmInferenceBaumWelch.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HmmInference/HmmInferenceBaumWelch.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7903226" vertical-offset="564" max-vertical-offset="1445">
-              <caret line="62" column="21" selection-start-line="62" selection-start-column="21" selection-end-line="62" selection-end-column="21" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="661" max-vertical-offset="1309">
+              <caret line="54" column="45" selection-start-line="54" selection-start-column="45" selection-end-line="54" selection-end-column="45" />
               <folding>
-                <element signature="e#0#15#0" expanded="true" />
+                <element signature="e#0#32#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Helper.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BioCommon/Helper.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="774" max-vertical-offset="1394">
+              <caret line="60" column="29" selection-start-line="60" selection-start-column="29" selection-end-line="60" selection-end-column="29" />
+              <folding>
+                <element signature="e#0#25#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -77,8 +79,8 @@
       <file leaf-file-name="HmmInferenceViterbi.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HmmInference/HmmInferenceViterbi.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612">
-              <caret line="5" column="37" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="37" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="578">
+              <caret line="75" column="0" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
               <folding>
                 <element signature="e#216#841#0" expanded="false" />
                 <element signature="e#911#1587#0" expanded="false" />
@@ -90,18 +92,17 @@
       <file leaf-file-name="Viterbi.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/StringAlignments/Viterbi.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="680">
-              <caret line="104" column="0" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="697">
+              <caret line="105" column="0" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
               <folding>
-                <element signature="e#0#26#0" expanded="true" />
-                <element signature="e#207#875#0" expanded="false" />
-                <element signature="e#934#1569#0" expanded="false" />
-                <element signature="e#1629#2306#0" expanded="false" />
-                <element signature="e#2393#3142#0" expanded="false" />
-                <element signature="e#3172#4114#0" expanded="false" />
-                <element signature="e#4144#5118#0" expanded="false" />
-                <element signature="e#5147#6153#0" expanded="false" />
-                <element signature="e#6183#7300#0" expanded="false" />
+                <element signature="e#208#876#0" expanded="false" />
+                <element signature="e#935#1570#0" expanded="false" />
+                <element signature="e#1630#2307#0" expanded="false" />
+                <element signature="e#2394#3143#0" expanded="false" />
+                <element signature="e#3173#4115#0" expanded="false" />
+                <element signature="e#4145#5119#0" expanded="false" />
+                <element signature="e#5148#6154#0" expanded="false" />
+                <element signature="e#6184#7301#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -145,9 +146,10 @@
         <option value="$PROJECT_DIR$/StringMatching/HmmInferenceViterbi.py" />
         <option value="$PROJECT_DIR$/StringMatching/Helper.py" />
         <option value="$PROJECT_DIR$/StringMatching/__init__.py" />
-        <option value="$PROJECT_DIR$/HmmInference/HmmInferenceBaumWelch.py" />
-        <option value="$PROJECT_DIR$/HmmInference/HmmInferenceViterbi.py" />
         <option value="$PROJECT_DIR$/StringAlignments/Viterbi.py" />
+        <option value="$PROJECT_DIR$/HmmInference/HmmInferenceViterbi.py" />
+        <option value="$PROJECT_DIR$/HmmInference/HmmInferenceBaumWelch.py" />
+        <option value="$PROJECT_DIR$/BioCommon/Helper.py" />
         <option value="$PROJECT_DIR$/HmmInference/ModelInference.py" />
       </list>
     </option>
@@ -297,92 +299,8 @@
       <recent name="C:\Users\ronvis\PycharmProjects\NeedlemanWunch\abc" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.ModelInference (1)">
-    <configuration default="false" name="SumHomology" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/StringMatching" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="NeedlemanWunch" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/StringMatching/SumHomology.py" />
-      <option name="PARAMETERS" value="" />
-      <RunnerSettings RunnerId="PyDebugRunner" />
-      <RunnerSettings RunnerId="PythonRunner" />
-      <ConfigurationWrapper RunnerId="PyDebugRunner" />
-      <ConfigurationWrapper RunnerId="PythonRunner" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Viterbi" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/StringMatching" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="NeedlemanWunch" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/StringMatching/Viterbi.py" />
-      <option name="PARAMETERS" value="" />
-      <RunnerSettings RunnerId="PyDebugRunner" />
-      <RunnerSettings RunnerId="PythonRunner" />
-      <ConfigurationWrapper RunnerId="PyDebugRunner" />
-      <ConfigurationWrapper RunnerId="PythonRunner" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python.ModelInference">
     <configuration default="false" name="ModelInference" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/StringMatching" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="NeedlemanWunch" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="C:\Users\ronvis\PycharmProjects\NeedlemanWunch\HmmInference\ModelInference.py" />
-      <option name="PARAMETERS" value="" />
-      <RunnerSettings RunnerId="PyDebugRunner" />
-      <RunnerSettings RunnerId="PythonRunner" />
-      <ConfigurationWrapper RunnerId="PyDebugRunner" />
-      <ConfigurationWrapper RunnerId="PythonRunner" />
-      <method />
-    </configuration>
-    <configuration default="false" name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/StringMatching" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="NeedlemanWunch" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/StringMatching/main.py" />
-      <option name="PARAMETERS" value="1110111010100000010101011111001000000 BaumWelch  0.10 0.10 0.90 0.10 0.30 0.10 0.80 0.10 0.50 0.10 0.80 0.50" />
-      <RunnerSettings RunnerId="PyDebugRunner" />
-      <RunnerSettings RunnerId="PythonRunner" />
-      <ConfigurationWrapper RunnerId="PyDebugRunner" />
-      <ConfigurationWrapper RunnerId="PythonRunner" />
-      <method />
-    </configuration>
-    <configuration default="false" name="ModelInference (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -396,8 +314,10 @@
       <module name="ComputationalBiology" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/HmmInference/ModelInference.py" />
-      <option name="PARAMETERS" value="" />
+      <option name="PARAMETERS" value="1110111010100000010101011111001000000 Viterbi  0.10 0.10 0.90 0.10 0.30 0.10 0.80 0.10 0.50 0.10 0.80 0.50" />
+      <RunnerSettings RunnerId="PyDebugRunner" />
       <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PyDebugRunner" />
       <ConfigurationWrapper RunnerId="PythonRunner" />
       <method />
     </configuration>
@@ -551,20 +471,12 @@
       <option name="USE_PATTERN" value="false" />
       <method />
     </configuration>
-    <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.SumHomology" />
-      <item index="1" class="java.lang.String" itemvalue="Python.Viterbi" />
-      <item index="2" class="java.lang.String" itemvalue="Python.ModelInference" />
-      <item index="3" class="java.lang.String" itemvalue="Python.main" />
-      <item index="4" class="java.lang.String" itemvalue="Python.ModelInference (1)" />
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="Python.ModelInference" />
     </list>
     <recent_temporary>
-      <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.ModelInference (1)" />
-        <item index="1" class="java.lang.String" itemvalue="Python.ModelInference" />
-        <item index="2" class="java.lang.String" itemvalue="Python.main" />
-        <item index="3" class="java.lang.String" itemvalue="Python.Viterbi" />
-        <item index="4" class="java.lang.String" itemvalue="Python.SumHomology" />
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="Python.ModelInference" />
       </list>
     </recent_temporary>
   </component>
@@ -734,7 +646,11 @@
       <created>1433197932342</created>
       <updated>1433197932342</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="perfect code, prior to adding decet argument parsing">
+      <created>1433199018942</created>
+      <updated>1433199018942</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -773,7 +689,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36373508" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25882354" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.07914439" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29098806" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29098806" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -819,7 +735,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="created skeleton for two HMM model inference methods" />
     <MESSAGE value="added pretty printability,&#10;improved skeleton,&#10;added test samples" />
     <MESSAGE value="added mocks for sufficient statistic inference" />
     <MESSAGE value="finished sufficient transition statistics for viterbi inference" />
@@ -844,14 +759,15 @@
     <MESSAGE value="added pretty printer to Viterbi inference" />
     <MESSAGE value="rename printer" />
     <MESSAGE value="entirely rearranged package hierarchy." />
-    <option name="LAST_COMMIT_MESSAGE" value="entirely rearranged package hierarchy." />
+    <MESSAGE value="perfect code, prior to adding decet argument parsing" />
+    <option name="LAST_COMMIT_MESSAGE" value="perfect code, prior to adding decet argument parsing" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="87" />
+      <option name="time" value="88" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -860,15 +776,14 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="1513" max-vertical-offset="3944">
           <caret line="89" column="22" selection-start-line="89" selection-start-column="22" selection-end-line="89" selection-end-column="22" />
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
-            <element signature="e#207#875#0" expanded="false" />
-            <element signature="e#934#1569#0" expanded="false" />
-            <element signature="e#1629#2306#0" expanded="false" />
-            <element signature="e#2393#3142#0" expanded="false" />
-            <element signature="e#3172#4114#0" expanded="false" />
-            <element signature="e#4144#5118#0" expanded="false" />
-            <element signature="e#5147#6153#0" expanded="false" />
-            <element signature="e#6183#7300#0" expanded="false" />
+            <element signature="e#208#876#0" expanded="false" />
+            <element signature="e#935#1570#0" expanded="false" />
+            <element signature="e#1630#2307#0" expanded="false" />
+            <element signature="e#2394#3143#0" expanded="false" />
+            <element signature="e#3173#4115#0" expanded="false" />
+            <element signature="e#4145#5119#0" expanded="false" />
+            <element signature="e#5148#6154#0" expanded="false" />
+            <element signature="e#6184#7301#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -877,7 +792,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="757" max-vertical-offset="1309">
           <caret line="63" column="46" selection-start-line="63" selection-start-column="46" selection-end-line="63" selection-end-column="46" />
-          <folding />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -906,15 +823,14 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="975" max-vertical-offset="3944">
           <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
-            <element signature="e#207#875#0" expanded="false" />
-            <element signature="e#934#1569#0" expanded="false" />
-            <element signature="e#1629#2306#0" expanded="false" />
-            <element signature="e#2393#3142#0" expanded="false" />
-            <element signature="e#3172#4114#0" expanded="false" />
-            <element signature="e#4144#5118#0" expanded="false" />
-            <element signature="e#5147#6153#0" expanded="false" />
-            <element signature="e#6183#7300#0" expanded="false" />
+            <element signature="e#208#876#0" expanded="false" />
+            <element signature="e#935#1570#0" expanded="false" />
+            <element signature="e#1630#2307#0" expanded="false" />
+            <element signature="e#2394#3143#0" expanded="false" />
+            <element signature="e#3173#4115#0" expanded="false" />
+            <element signature="e#4145#5119#0" expanded="false" />
+            <element signature="e#5148#6154#0" expanded="false" />
+            <element signature="e#6184#7301#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -923,7 +839,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="1037">
           <caret line="17" column="21" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
-          <folding />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -952,15 +870,14 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="2006" max-vertical-offset="3179">
           <caret line="82" column="20" selection-start-line="82" selection-start-column="20" selection-end-line="82" selection-end-column="20" />
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
-            <element signature="e#207#875#0" expanded="false" />
-            <element signature="e#934#1569#0" expanded="false" />
-            <element signature="e#1629#2306#0" expanded="false" />
-            <element signature="e#2393#3142#0" expanded="false" />
-            <element signature="e#3172#4114#0" expanded="false" />
-            <element signature="e#4144#5118#0" expanded="false" />
-            <element signature="e#5147#6153#0" expanded="false" />
-            <element signature="e#6183#7300#0" expanded="false" />
+            <element signature="e#208#876#0" expanded="false" />
+            <element signature="e#935#1570#0" expanded="false" />
+            <element signature="e#1630#2307#0" expanded="false" />
+            <element signature="e#2394#3143#0" expanded="false" />
+            <element signature="e#3173#4115#0" expanded="false" />
+            <element signature="e#4145#5119#0" expanded="false" />
+            <element signature="e#5148#6154#0" expanded="false" />
+            <element signature="e#6184#7301#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1018,15 +935,14 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="782" max-vertical-offset="1411">
           <caret line="177" column="0" selection-start-line="177" selection-start-column="0" selection-end-line="177" selection-end-column="0" />
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
-            <element signature="e#207#875#0" expanded="false" />
-            <element signature="e#934#1569#0" expanded="false" />
-            <element signature="e#1629#2306#0" expanded="false" />
-            <element signature="e#2393#3142#0" expanded="false" />
-            <element signature="e#3172#4114#0" expanded="false" />
-            <element signature="e#4144#5118#0" expanded="false" />
-            <element signature="e#5147#6153#0" expanded="false" />
-            <element signature="e#6183#7300#0" expanded="false" />
+            <element signature="e#208#876#0" expanded="false" />
+            <element signature="e#935#1570#0" expanded="false" />
+            <element signature="e#1630#2307#0" expanded="false" />
+            <element signature="e#2394#3143#0" expanded="false" />
+            <element signature="e#3173#4115#0" expanded="false" />
+            <element signature="e#4145#5119#0" expanded="false" />
+            <element signature="e#5148#6154#0" expanded="false" />
+            <element signature="e#6184#7301#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1060,15 +976,14 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="884" max-vertical-offset="1377">
           <caret line="52" column="30" selection-start-line="52" selection-start-column="30" selection-end-line="52" selection-end-column="30" />
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
-            <element signature="e#207#875#0" expanded="false" />
-            <element signature="e#934#1569#0" expanded="false" />
-            <element signature="e#1629#2306#0" expanded="false" />
-            <element signature="e#2393#3142#0" expanded="false" />
-            <element signature="e#3172#4114#0" expanded="false" />
-            <element signature="e#4144#5118#0" expanded="false" />
-            <element signature="e#5147#6153#0" expanded="false" />
-            <element signature="e#6183#7300#0" expanded="false" />
+            <element signature="e#208#876#0" expanded="false" />
+            <element signature="e#935#1570#0" expanded="false" />
+            <element signature="e#1630#2307#0" expanded="false" />
+            <element signature="e#2394#3143#0" expanded="false" />
+            <element signature="e#3173#4115#0" expanded="false" />
+            <element signature="e#4145#5119#0" expanded="false" />
+            <element signature="e#5148#6154#0" expanded="false" />
+            <element signature="e#6184#7301#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1102,15 +1017,14 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="595" max-vertical-offset="1649">
           <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
-            <element signature="e#207#875#0" expanded="false" />
-            <element signature="e#934#1569#0" expanded="false" />
-            <element signature="e#1629#2306#0" expanded="false" />
-            <element signature="e#2393#3142#0" expanded="false" />
-            <element signature="e#3172#4114#0" expanded="false" />
-            <element signature="e#4144#5118#0" expanded="false" />
-            <element signature="e#5147#6153#0" expanded="false" />
-            <element signature="e#6183#7300#0" expanded="false" />
+            <element signature="e#208#876#0" expanded="false" />
+            <element signature="e#935#1570#0" expanded="false" />
+            <element signature="e#1630#2307#0" expanded="false" />
+            <element signature="e#2394#3143#0" expanded="false" />
+            <element signature="e#3173#4115#0" expanded="false" />
+            <element signature="e#4145#5119#0" expanded="false" />
+            <element signature="e#5148#6154#0" expanded="false" />
+            <element signature="e#6184#7301#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1287,20 +1201,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BioCommon/Helper.py">
+    <entry file="file://$PROJECT_DIR$/StringAlignments/Viterbi.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2079566" vertical-offset="4" max-vertical-offset="1360">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="697">
+          <caret line="105" column="0" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
           <folding>
-            <element signature="e#0#25#0" expanded="true" />
+            <element signature="e#208#876#0" expanded="false" />
+            <element signature="e#935#1570#0" expanded="false" />
+            <element signature="e#1630#2307#0" expanded="false" />
+            <element signature="e#2394#3143#0" expanded="false" />
+            <element signature="e#3173#4115#0" expanded="false" />
+            <element signature="e#4145#5119#0" expanded="false" />
+            <element signature="e#5148#6154#0" expanded="false" />
+            <element signature="e#6184#7301#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/HmmInference/HmmInferenceViterbi.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612">
-          <caret line="5" column="37" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="37" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="578">
+          <caret line="75" column="0" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
           <folding>
             <element signature="e#216#841#0" expanded="false" />
             <element signature="e#911#1587#0" expanded="false" />
@@ -1308,36 +1229,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HmmInference/HmmInferenceBaumWelch.py">
+    <entry file="file://$PROJECT_DIR$/BioCommon/Helper.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1360">
-          <caret line="6" column="39" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="774" max-vertical-offset="1394">
+          <caret line="60" column="29" selection-start-line="60" selection-start-column="29" selection-end-line="60" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/StringAlignments/Viterbi.py">
+    <entry file="file://$PROJECT_DIR$/HmmInference/HmmInferenceBaumWelch.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="680">
-          <caret line="104" column="0" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="661" max-vertical-offset="1309">
+          <caret line="54" column="45" selection-start-line="54" selection-start-column="45" selection-end-line="54" selection-end-column="45" />
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
-            <element signature="e#207#875#0" expanded="false" />
-            <element signature="e#934#1569#0" expanded="false" />
-            <element signature="e#1629#2306#0" expanded="false" />
-            <element signature="e#2393#3142#0" expanded="false" />
-            <element signature="e#3172#4114#0" expanded="false" />
-            <element signature="e#4144#5118#0" expanded="false" />
-            <element signature="e#5147#6153#0" expanded="false" />
-            <element signature="e#6183#7300#0" expanded="false" />
+            <element signature="e#0#32#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/HmmInference/ModelInference.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7903226" vertical-offset="564" max-vertical-offset="1445">
-          <caret line="62" column="21" selection-start-line="62" selection-start-column="21" selection-end-line="62" selection-end-column="21" />
+        <state vertical-scroll-proportion="0.6854839" vertical-offset="0" max-vertical-offset="1887">
+          <caret line="25" column="22" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>

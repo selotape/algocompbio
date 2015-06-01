@@ -74,5 +74,3 @@ def viterbi_inference(X, S, E, T, alphabet, states):
         current_logprob, current_path = viterbi(X, states, S, T, E)
 
     printer(T, E, current_logprob)
-
-    return E, T
