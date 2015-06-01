@@ -1,6 +1,6 @@
 __author__ = 'ronvis'
 
-from StringMatching.Helper import generate_score_function
+from BioCommon.Helper import generate_score_function
 
 
 def initMatrix(S, T, homology):
@@ -36,7 +36,7 @@ def test():
 
     matrix = initMatrix(S, T, homology)
 
-    # my_pretty_print(S, T, matrix)
+    # needleman_wunch_printer(S, T, matrix)
     print 'sumHomology: ', str(matrix[len(T)][len(S)])
 
 

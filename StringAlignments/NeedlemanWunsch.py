@@ -1,6 +1,6 @@
 __author__ = 'ronvis'
 
-from StringMatching.Helper import generate_score_function, my_pretty_print
+from BioCommon.Helper import generate_score_function, needleman_wunch_printer
 
 
 def initMatrix(S, T, sigma):
@@ -36,7 +36,7 @@ def initMatrix(S, T, sigma):
 
 def printScoreMatrix(S, T, sigma):
     matrix = initMatrix(S, T, sigma)
-    my_pretty_print(S, T, matrix)
+    needleman_wunch_printer(S, T, matrix)
 
 
 def test():

@@ -1,11 +1,14 @@
 from pprint import PrettyPrinter
 import math
 
-from Helper import init_dict_matrix
-from Helper import MIN_INF, log0
-from StringMatching.Helper import printer, header_printer
-from viterbi_shay import forward
-from viterbi_shay import backward
+from BioCommon.Helper import init_dict_matrix
+from BioCommon.Helper import MIN_INF, log0
+from BioCommon.Helper import printer, header_printer
+from StringAlignments.Viterbi import forward
+from StringAlignments.Viterbi import backward
+
+
+
 
 
 

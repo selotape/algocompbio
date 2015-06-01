@@ -1,6 +1,6 @@
 from pprint import PrettyPrinter
 
-from HmmInferenceViterbi import viterbi_inference
+from HmmInference.HmmInferenceViterbi import viterbi_inference
 from HmmInferenceBaumWelch import baum_welch_inference
 
 
@@ -57,6 +57,8 @@ def test_inferences():
 
 
 if __name__ == '__main__':
+    # parser = argparse.ArgumentParser(description='Process some integers.')
+    # parser.add_argument('')
     test_inferences()
 
 

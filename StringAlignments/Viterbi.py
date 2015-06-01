@@ -1,21 +1,8 @@
 from math import fsum, exp
 from collections import defaultdict
 
-from Helper import log0
+from BioCommon.Helper import log0
 
-
-
-
-
-
-# Don't study this, it just prints a table of the steps.
-def print_dptable(V):
-    s = "    " + " ".join(("%7d" % i) for i in range(len(V))) + "\n"
-    for y in V[0]:
-        s += "%.5s: " % y
-        s += " ".join("%.7s" % ("%f" % v[y]) for v in V)
-        s += "\n"
-    print(s)
 
 
 # NOTE - assumes trans_p & emit_p contain no zeros
@@ -51,10 +38,10 @@ def forward(obs, states, start_p, trans_p, emit_p):
 
     # Initialize base cases (t == 0)
     for y in states:
-        V[0][y] = log0(start_p[y]) + log0(emit_p[y][obs[0]])
+        V[1][y] = log0(start_p[y]) + log0(emit_p[y][obs[0]])
 
     # Run Viterbi for t > 0
-    for t in range(0, len(obs) - 1):
+    for t in range(1, len(obs)):
         for y in states:
             max_a = max(V[t][y0] + log0(trans_p[y0][y]) for y0 in states)
 
@@ -75,10 +62,10 @@ def backward(obs, states, start_p, trans_p, emit_p):
 
     # Initialize base cases (t == n)
     for y in states:
-        V[len(obs) - 1][y] = log0(1)
+        V[len(obs)][y] = log0(1)
 
     # Run Viterbi for t < n
-    for t in reversed(range(0, len(obs) - 1)):
+    for t in reversed(range(1, len(obs))):
         for y in states:
             max_a = max(V[t + 1][y0] + log0(trans_p[y][y0]) + log0(emit_p[y0][obs[t]]) for y0 in states)
 

@@ -1,9 +1,9 @@
-from StringMatching.Helper import header_printer, printer
+from BioCommon.Helper import header_printer, printer
 
 __author__ = 'ronvis'
 from collections import defaultdict
 
-from Viterbi import viterbi
+from StringAlignments.Viterbi import viterbi
 
 
 def sufficient_transition_statistics(states, path):
