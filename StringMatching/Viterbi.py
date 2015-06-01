@@ -7,6 +7,7 @@ from Helper import log0
 
 
 
+
 # Don't study this, it just prints a table of the steps.
 def print_dptable(V):
     s = "    " + " ".join(("%7d" % i) for i in range(len(V))) + "\n"
@@ -45,7 +46,7 @@ def viterbi(obs, states, start_p, trans_p, emit_p):
     return (logprob, path[state])
 
 
-def forward_viterbi(obs, states, start_p, trans_p, emit_p):
+def forward(obs, states, start_p, trans_p, emit_p):
     V = defaultdict(dict)
 
     # Initialize base cases (t == 0)
@@ -69,7 +70,7 @@ def forward_viterbi(obs, states, start_p, trans_p, emit_p):
     return dict(V), likelihood
 
 
-def backward_viterbi(obs, states, start_p, trans_p, emit_p):
+def backward(obs, states, start_p, trans_p, emit_p):
     V = defaultdict(dict)
 
     # Initialize base cases (t == n)
@@ -162,7 +163,7 @@ def example_forward():
         'Bckg1': {'0': 0.5, '1': 0.5}
     }
 
-    return forward_viterbi(observations,
+    return forward(observations,
                            emission_probability.keys(),
                            start_probability,
                            transition_probability,

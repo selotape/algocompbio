@@ -14,10 +14,9 @@ pprint = PrettyPrinter(indent=4).pprint
 
 
 def infer_model(method, X, S, E, T, alphabet, states, sigma=_DEFAULT_MARGIN):
-
-    if ('viterbi' == method):
+    if _VITERBI == method:
         E, T = viterbi_inference(X, S, E, T, alphabet, states)
-    elif 'baum-welch' == method:
+    elif _BAUM_WELCH == method:
         E, T = baum_welch_inference(X, S, E, T, sigma, alphabet, states)
     else:
         raise NotImplementedError("algorithm \'%s\' is yet to be invented." % method)
@@ -30,8 +29,7 @@ def test_inferences():
 
     alphabet = ['0', '1']
 
-    # X = '1110111010100000010101011111001000000'
-    X = '0000000000000000000000000000000000000'
+    X = '1110111010100000010101011111001000000'
 
     S = {'T0': 0.5, 'T1': 0.5, 'B0': 0.0, 'B1': 0.0}
 
@@ -52,10 +50,10 @@ def test_inferences():
     }
 
     E, T = infer_model(method, X, S, E, T, alphabet, states)
-    print "Emmissions:"
-    pprint(E)
-    print "Transitions:"
-    pprint(T)
+    # print "Emmissions:"
+    # pprint(E)
+    # print "Transitions:"
+    # pprint(T)
 
 
 if __name__ == '__main__':

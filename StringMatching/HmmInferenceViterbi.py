@@ -4,7 +4,7 @@ from collections import defaultdict
 from Viterbi import viterbi
 
 
-def sufficient_transition_statistics_viterbi(states, path):
+def sufficient_transition_statistics(states, path):
     # init
     Nt = {}
     for state in states:
@@ -31,7 +31,7 @@ def sufficient_transition_statistics_viterbi(states, path):
     return Nt
 
 
-def sufficient_emission_statistics_viterbi(states, alphabet, path, X):
+def sufficient_emission_statistics(states, alphabet, path, X):
     # init
     Ne = {}
     for state in states:
@@ -65,8 +65,8 @@ def viterbi_inference(X, S, E, T, alphabet, states):
     while last_logprob != current_logprob:  # TODO - instead of equality, change stop condition to rely on the required diff
         last_logprob = current_logprob
 
-        Nt = sufficient_transition_statistics_viterbi(states, last_path)
-        Ne = sufficient_emission_statistics_viterbi(states, alphabet, last_path, X)
+        Nt = sufficient_transition_statistics(states, last_path)
+        Ne = sufficient_emission_statistics(states, alphabet, last_path, X)
         current_logprob, current_path = viterbi(X, states, S, Nt, Ne)
 
         print current_logprob, current_path
