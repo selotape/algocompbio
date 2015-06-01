@@ -3,9 +3,11 @@ import math
 
 from Helper import init_dict_matrix
 from Helper import MIN_INF, log0
-from StringMatching.Helper import printer
+from StringMatching.Helper import printer, print_header
 from viterbi_shay import forward
 from viterbi_shay import backward
+
+
 
 
 
@@ -43,6 +45,7 @@ def sufficient_statistics(states, alphabet, F, B, T, E, X, log_likelihood):
 
     return E_Nt, E_Ne
 
+
 def baum_welch_inference(X, S, E, T, sigma, alphabet, states):
     F, forward_likelihood = forward(X, states, S, T, E)
     B, backward_likelihood = backward(X, states, S, T, E)
@@ -50,10 +53,7 @@ def baum_welch_inference(X, S, E, T, sigma, alphabet, states):
     last_log_likelihood = MIN_INF
     current_log_likelihood = MIN_INF + 1
 
-    print ' '.join(X)
-    print '------------------------------------------------------------------------------------'
-    print "| A->B A->C A->0  : B->A B->D B->0  : C->A C->B C->0  : D->A D->B D->0  :   Score  |"
-    print '------------------------------------------------------------------------------------'
+    print_header(X)
     while ( current_log_likelihood - last_log_likelihood > sigma ):
         last_log_likelihood = current_log_likelihood
 
@@ -64,14 +64,6 @@ def baum_welch_inference(X, S, E, T, sigma, alphabet, states):
         printer(T, E, current_log_likelihood)
 
         T, E = sufficient_statistics(states, alphabet, F, B, T, E, X, current_log_likelihood)
-
-        # print 'Transissions:'
-        # pprint(T)
-        # print 'Emissions:'
-        # pprint(E)
-        # print 'last_log_likelihood:', last_log_likelihood
-        # print 'current_log_likelihood:', current_log_likelihood
-        # print '===================================='
 
     printer(T, E, current_log_likelihood)
     return E, T

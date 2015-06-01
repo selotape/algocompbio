@@ -1,3 +1,5 @@
+from StringMatching.Helper import print_header, printer
+
 __author__ = 'ronvis'
 from collections import defaultdict
 
@@ -58,17 +60,19 @@ def sufficient_emission_statistics(states, alphabet, path, X):
 
 
 def viterbi_inference(X, S, E, T, alphabet, states):
-    last_logprob, last_path = viterbi(X, states, S, T, E)
-    print last_logprob, last_path
-    current_logprob, current_path = 0, []
+    current_logprob, last_path = viterbi(X, states, S, T, E)
+    last_logprob, current_path = 0, []
 
+    print_header(X)
     while last_logprob != current_logprob:  # TODO - instead of equality, change stop condition to rely on the required diff
+        printer(T, E, current_logprob)
+
         last_logprob = current_logprob
 
-        Nt = sufficient_transition_statistics(states, last_path)
-        Ne = sufficient_emission_statistics(states, alphabet, last_path, X)
-        current_logprob, current_path = viterbi(X, states, S, Nt, Ne)
+        T = sufficient_transition_statistics(states, last_path)
+        E = sufficient_emission_statistics(states, alphabet, last_path, X)
+        current_logprob, current_path = viterbi(X, states, S, T, E)
 
-        print current_logprob, current_path
+    printer(T, E, current_logprob)
 
-    return Ne, Nt
+    return E, T
