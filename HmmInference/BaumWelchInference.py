@@ -46,7 +46,6 @@ def sufficient_statistics(states, alphabet, F, B, T, E, X, log_likelihood):
 
 
 def baum_welch_inference(X, S, E, T, sigma, alphabet, states):
-
     last_log_likelihood = MIN_INF
     current_log_likelihood = MIN_INF + 1
 

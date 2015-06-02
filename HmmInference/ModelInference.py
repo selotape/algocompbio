@@ -2,8 +2,8 @@ import argparse
 
 from BioCommon.Helper import random_hmm_args, header_printer, printer
 from BioCommon.Consts import *
-from HmmInferenceViterbi import viterbi_inference
-from HmmInferenceBaumWelch import baum_welch_inference
+from ViterbiInference import viterbi_inference
+from BaumWelchInference import baum_welch_inference
 
 
 def infer_model(method, observation, start_p, emission_p, transmission_p, alphabet, states, sigma=DEFAULT_MARGIN):

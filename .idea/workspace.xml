@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7e185df8-ed71-4498-bfd7-e701e526f387" name="Default" comment="tidied up AGAIN!">
+    <list default="true" id="7e185df8-ed71-4498-bfd7-e701e526f387" name="Default" comment="added pseudo count to sufficient statistics">
+      <change type="MOVED" beforePath="C:\Users\ronvis\PycharmProjects\NeedlemanWunch\HmmInference\HmmInferenceBaumWelch.py" afterPath="$PROJECT_DIR$/HmmInference/BaumWelchInference.py" />
+      <change type="MOVED" beforePath="C:\Users\ronvis\PycharmProjects\NeedlemanWunch\HmmInference\HmmInferenceViterbi.py" afterPath="$PROJECT_DIR$/HmmInference/ViterbiInference.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BioCommon/Consts.py" afterPath="$PROJECT_DIR$/BioCommon/Consts.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HmmInference/ModelInference.py" afterPath="$PROJECT_DIR$/HmmInference/ModelInference.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="NeedlemanWunch.iws" />
@@ -14,7 +18,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/ComputationalBiology$ModelInference.coverage" NAME="ModelInference Coverage Results" MODIFIED="1433276060912" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HmmInference" />
+    <SUITE FILE_PATH="coverage/ComputationalBiology$ModelInference.coverage" NAME="ModelInference Coverage Results" MODIFIED="1433279477986" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HmmInference" />
     <SUITE FILE_PATH="coverage/NeedlemanWunch$SumHomology.coverage" NAME="SumHomology Coverage Results" MODIFIED="1430944770015" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/StringMatching" />
     <SUITE FILE_PATH="coverage/NeedlemanWunch$Viterbi.coverage" NAME="Viterbi Coverage Results" MODIFIED="1432898155089" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/StringMatching" />
     <SUITE FILE_PATH="coverage/NeedlemanWunch$main.coverage" NAME="main Coverage Results" MODIFIED="1433193240797" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/StringMatching" />
@@ -42,16 +46,18 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="1309">
               <caret line="8" column="32" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
-              <folding />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HmmInferenceBaumWelch.py" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/HmmInference/HmmInferenceBaumWelch.py">
+      <file leaf-file-name="BaumWelchInference.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HmmInference/BaumWelchInference.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.38387096" vertical-offset="17" max-vertical-offset="1207">
-              <caret line="15" column="46" selection-start-line="15" selection-start-column="46" selection-end-line="15" selection-end-column="46" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1207">
+              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -59,12 +65,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HmmInferenceViterbi.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HmmInference/HmmInferenceViterbi.py">
+      <file leaf-file-name="ViterbiInference.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/HmmInference/ViterbiInference.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="1428">
-              <caret line="5" column="44" selection-start-line="5" selection-start-column="44" selection-end-line="5" selection-end-column="44" />
-              <folding />
+            <state vertical-scroll-proportion="0.6854839" vertical-offset="0" max-vertical-offset="1445">
+              <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#35#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -85,7 +93,7 @@
         <entry file="file://$PROJECT_DIR$/BioCommon/Consts.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="272">
-              <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
+              <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -94,7 +102,7 @@
       <file leaf-file-name="Viterbi.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/StringAlignments/Viterbi.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1785" max-vertical-offset="3757">
+            <state vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="3706">
               <caret line="105" column="0" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
               <folding />
             </state>
@@ -141,10 +149,10 @@
         <option value="$PROJECT_DIR$/StringMatching/__init__.py" />
         <option value="$PROJECT_DIR$/StringAlignments/Viterbi.py" />
         <option value="$PROJECT_DIR$/BioCommon/Helper.py" />
-        <option value="$PROJECT_DIR$/BioCommon/Consts.py" />
-        <option value="$PROJECT_DIR$/HmmInference/HmmInferenceViterbi.py" />
         <option value="$PROJECT_DIR$/HmmInference/ModelInference.py" />
         <option value="$PROJECT_DIR$/HmmInference/HmmInferenceBaumWelch.py" />
+        <option value="$PROJECT_DIR$/HmmInference/HmmInferenceViterbi.py" />
+        <option value="$PROJECT_DIR$/BioCommon/Consts.py" />
       </list>
     </option>
   </component>
@@ -308,7 +316,7 @@
       <module name="ComputationalBiology" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/HmmInference/ModelInference.py" />
-      <option name="PARAMETERS" value="-hmm_params 0.10 0.10 0.90 0.10 0.30 0.10 0.80 0.10 0.50 0.10 0.80 0.50  -algorithm BaumWelch -observation 1110111010100000010101011111001000000" />
+      <option name="PARAMETERS" value="-attempts 10 -algorithm BaumWelch -observation 11111111111111100000000000000000000111000000111111111111111000000000000" />
       <RunnerSettings RunnerId="PyDebugRunner" />
       <RunnerSettings RunnerId="PythonRunner" />
       <ConfigurationWrapper RunnerId="PyDebugRunner" />
@@ -660,7 +668,11 @@
       <created>1433276081584</created>
       <updated>1433276081584</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="added pseudo count to sufficient statistics">
+      <created>1433276102627</created>
+      <updated>1433276102627</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -745,7 +757,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="fixed log probabilities in viterbi. now it supports zeros" />
     <MESSAGE value="changed example" />
     <MESSAGE value="tidied up mains" />
     <MESSAGE value="renamed methods to fit convention" />
@@ -770,7 +781,8 @@
     <MESSAGE value="tidied up a bit" />
     <MESSAGE value="tidied up again" />
     <MESSAGE value="tidied up AGAIN!" />
-    <option name="LAST_COMMIT_MESSAGE" value="tidied up AGAIN!" />
+    <MESSAGE value="added pseudo count to sufficient statistics" />
+    <option name="LAST_COMMIT_MESSAGE" value="added pseudo count to sufficient statistics" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -789,7 +801,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HmmInference/HmmInferenceBaumWelch.py">
+    <entry file="file://$PROJECT_DIR$/HmmInference/BaumWelchInference.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="757" max-vertical-offset="1309">
           <caret line="63" column="46" selection-start-line="63" selection-start-column="46" selection-end-line="63" selection-end-column="46" />
@@ -803,7 +815,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="340" max-vertical-offset="1411">
           <caret line="20" column="24" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
-          <folding />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -825,7 +839,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HmmInference/HmmInferenceBaumWelch.py">
+    <entry file="file://$PROJECT_DIR$/HmmInference/BaumWelchInference.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="1037">
           <caret line="17" column="21" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
@@ -849,7 +863,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="1411">
           <caret line="43" column="5" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
-          <folding />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -861,7 +877,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HmmInference/HmmInferenceViterbi.py">
+    <entry file="file://$PROJECT_DIR$/HmmInference/ViterbiInference.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -872,7 +888,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="272" max-vertical-offset="1292">
           <caret line="16" column="11" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
-          <folding />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1147,19 +1165,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/StringAlignments/Viterbi.py">
+    <entry file="file://$PROJECT_DIR$/HmmInference/ModelInference.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="697">
-          <caret line="105" column="0" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="1309">
+          <caret line="8" column="32" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BioCommon/Consts.py">
+    <entry file="file://$PROJECT_DIR$/HmmInference/BaumWelchInference.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="272">
-          <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1207">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1173,28 +1195,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HmmInference/HmmInferenceViterbi.py">
+    <entry file="file://$PROJECT_DIR$/StringAlignments/Viterbi.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="1428">
-          <caret line="5" column="44" selection-start-line="5" selection-start-column="44" selection-end-line="5" selection-end-column="44" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="697">
+          <caret line="105" column="0" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HmmInference/ModelInference.py">
+    <entry file="file://$PROJECT_DIR$/BioCommon/Consts.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="1309">
-          <caret line="8" column="32" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="272">
+          <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HmmInference/HmmInferenceBaumWelch.py">
+    <entry file="file://$PROJECT_DIR$/HmmInference/ViterbiInference.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38387096" vertical-offset="17" max-vertical-offset="1207">
-          <caret line="15" column="46" selection-start-line="15" selection-start-column="46" selection-end-line="15" selection-end-column="46" />
+        <state vertical-scroll-proportion="0.6854839" vertical-offset="0" max-vertical-offset="1445">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding>
-            <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#0#35#0" expanded="true" />
           </folding>
         </state>
       </provider>

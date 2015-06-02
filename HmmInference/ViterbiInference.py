@@ -44,9 +44,10 @@ def sufficient_emission_statistics(states, alphabet, path, X):
     for state, emit in zip(path, X):
         Ne[state][emit] += 1
 
-    for state in states:
+    for s in states:
         for c in alphabet:
-            Ne += PSEUDO_COUNT
+            # Ne[s][c] += PSEUDO_COUNT
+            pass
 
     # normalize
     for state in states:
