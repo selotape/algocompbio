@@ -4,8 +4,6 @@ from collections import defaultdict
 from BioCommon.Helper import log0
 
 
-
-# NOTE - assumes trans_p & emit_p contain no zeros
 def viterbi(obs, states, start_p, trans_p, emit_p):
     V = [{}]
     path = {}

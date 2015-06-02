@@ -9,7 +9,6 @@ def init_matrix(S, T, sigma):
 
     gapScore = sigma('a', '_')
 
-    path = ''
     # start hardcore calculation
     for i in range(1, len(S) + 1, 1):
         for j in range(1, len(T) + 1, 1):

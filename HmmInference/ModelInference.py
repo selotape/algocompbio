@@ -18,21 +18,21 @@ def infer_model(method, observation, start_p, emission_p, transmission_p, alphab
     return T, E, current_logprob
 
 
-def emission_matrix(prm):
+def emission_matrix(params):
     return {
-        'A': {'0': prm[2], '1': 1 - prm[2]},
-        'B': {'0': prm[5], '1': 1 - prm[5]},
-        'C': {'0': prm[8], '1': 1 - prm[8]},
-        'D': {'0': prm[11], '1': 1 - prm[11]}
+        'A': {'0': params[2], '1': 1 - params[2]},
+        'B': {'0': params[5], '1': 1 - params[5]},
+        'C': {'0': params[8], '1': 1 - params[8]},
+        'D': {'0': params[11], '1': 1 - params[11]}
     }
 
 
-def transission_matrix(prm):
+def transission_matrix(params):
     return {
-        'A': {'A': 1 - prm[0] - prm[1], 'B': prm[0], 'C': prm[1], 'D': 0.0},
-        'B': {'A': prm[3], 'B': 1 - prm[3] - prm[4], 'C': 0.0, 'D': prm[4]},
-        'C': {'A': prm[6], 'B': prm[7], 'C': 1 - prm[6] - prm[7], 'D': 0.0},
-        'D': {'A': prm[9], 'B': prm[10], 'C': 0.0, 'D': 1 - prm[9] - prm[10]}
+        'A': {'A': 1 - params[0] - params[1], 'B': params[0], 'C': params[1], 'D': 0.0},
+        'B': {'A': params[3], 'B': 1 - params[3] - params[4], 'C': 0.0, 'D': params[4]},
+        'C': {'A': params[6], 'B': params[7], 'C': 1 - params[6] - params[7], 'D': 0.0},
+        'D': {'A': params[9], 'B': params[10], 'C': 0.0, 'D': 1 - params[9] - params[10]}
     }
 
 

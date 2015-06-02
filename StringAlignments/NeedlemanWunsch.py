@@ -20,7 +20,6 @@ def initMatrix(S, T, sigma):
     for j in range(len(T) + 1):
         matrix[j][0] = j * gapscore
 
-    path = ''
     # start hardcore calculation
     for i in range(1, len(S) + 1, 1):
         for j in range(1, len(T) + 1, 1):
