@@ -1,4 +1,3 @@
 # Algorithms in computational biology
-All python of course.
 
-contains algorithms to find ____ and ------ & ==========, also ~~~~~~~~.
+Contains algorithms for string alignment, likelihood calculation and HMM optimization.
