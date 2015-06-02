@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7e185df8-ed71-4498-bfd7-e701e526f387" name="Default" comment="added random hmm params generator and the ability to infer hmm multiple times and keep the best score">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BioCommon/Helper.py" afterPath="$PROJECT_DIR$/BioCommon/Helper.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HmmInference/HmmInferenceBaumWelch.py" afterPath="$PROJECT_DIR$/HmmInference/HmmInferenceBaumWelch.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HmmInference/HmmInferenceViterbi.py" afterPath="$PROJECT_DIR$/HmmInference/HmmInferenceViterbi.py" />
+    <list default="true" id="7e185df8-ed71-4498-bfd7-e701e526f387" name="Default" comment="tidied up a bit">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HmmInference/ModelInference.py" afterPath="$PROJECT_DIR$/HmmInference/ModelInference.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -20,7 +17,7 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/NeedlemanWunch$SumHomology.coverage" NAME="SumHomology Coverage Results" MODIFIED="1430944770015" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/StringMatching" />
     <SUITE FILE_PATH="coverage/NeedlemanWunch$Viterbi.coverage" NAME="Viterbi Coverage Results" MODIFIED="1432898155089" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/StringMatching" />
-    <SUITE FILE_PATH="coverage/ComputationalBiology$ModelInference__1_.coverage" NAME="ModelInference Coverage Results" MODIFIED="1433268853148" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HmmInference" />
+    <SUITE FILE_PATH="coverage/ComputationalBiology$ModelInference__1_.coverage" NAME="ModelInference Coverage Results" MODIFIED="1433272179151" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HmmInference" />
     <SUITE FILE_PATH="coverage/NeedlemanWunch$main.coverage" NAME="main Coverage Results" MODIFIED="1433193240797" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/StringMatching" />
     <SUITE FILE_PATH="coverage/NeedlemanWunch$NeedlemanWunsch.coverage" NAME="NeedlemanWunsch Coverage Results" MODIFIED="1429904863514" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/StringMatching" />
     <SUITE FILE_PATH="coverage/NeedlemanWunch$SmithWaterman.coverage" NAME="SmithWaterman Coverage Results" MODIFIED="1429906938788" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/StringMatching" />
@@ -43,8 +40,8 @@
       <file leaf-file-name="ModelInference.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/HmmInference/ModelInference.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7580645" vertical-offset="1730" max-vertical-offset="2350">
-              <caret line="88" column="0" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.27419356" vertical-offset="1130" max-vertical-offset="2125">
+              <caret line="52" column="22" selection-start-line="52" selection-start-column="22" selection-end-line="52" selection-end-column="22" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -55,8 +52,8 @@
       <file leaf-file-name="HmmInferenceBaumWelch.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HmmInference/HmmInferenceBaumWelch.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="757" max-vertical-offset="1377">
-              <caret line="75" column="39" selection-start-line="75" selection-start-column="11" selection-end-line="75" selection-end-column="39" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="774" max-vertical-offset="1394">
+              <caret line="76" column="39" selection-start-line="76" selection-start-column="11" selection-end-line="76" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -312,7 +309,7 @@
       <module name="ComputationalBiology" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/HmmInference/ModelInference.py" />
-      <option name="PARAMETERS" value="-attempts 100 Viterbi 1111110111111111111011111110000000101010100110010000000000110111101111110101010010101001001111111011111110001000000001000000010111111111111101" />
+      <option name="PARAMETERS" value="-hmm_params 0.10 0.10 0.90 0.10 0.30 0.10 0.80 0.10 0.50 0.10 0.80 0.50  -algorithm BaumWelch -observation 1110111010100000010101011111001000000" />
       <RunnerSettings RunnerId="PyDebugRunner" />
       <RunnerSettings RunnerId="PythonRunner" />
       <ConfigurationWrapper RunnerId="PyDebugRunner" />
@@ -652,7 +649,11 @@
       <created>1433201079604</created>
       <updated>1433201079604</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="tidied up a bit">
+      <created>1433269034508</created>
+      <updated>1433269034508</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -737,7 +738,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="finished sufficient transition statistics for viterbi inference" />
     <MESSAGE value="finished sufficient EMMISION statistics for viterbi inference" />
     <MESSAGE value="changed defaultDict to dict for future compatibility" />
     <MESSAGE value="fixed log probabilities in viterbi. now it supports zeros" />
@@ -762,7 +762,8 @@
     <MESSAGE value="perfect code, prior to adding decet argument parsing" />
     <MESSAGE value="added decent argument parsing" />
     <MESSAGE value="added random hmm params generator and the ability to infer hmm multiple times and keep the best score" />
-    <option name="LAST_COMMIT_MESSAGE" value="added random hmm params generator and the ability to infer hmm multiple times and keep the best score" />
+    <MESSAGE value="tidied up a bit" />
+    <option name="LAST_COMMIT_MESSAGE" value="tidied up a bit" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -1229,8 +1230,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/HmmInference/HmmInferenceBaumWelch.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="757" max-vertical-offset="1377">
-          <caret line="75" column="39" selection-start-line="75" selection-start-column="11" selection-end-line="75" selection-end-column="39" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="774" max-vertical-offset="1394">
+          <caret line="76" column="39" selection-start-line="76" selection-start-column="11" selection-end-line="76" selection-end-column="39" />
           <folding />
         </state>
       </provider>
@@ -1247,8 +1248,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/HmmInference/ModelInference.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7580645" vertical-offset="1730" max-vertical-offset="2350">
-          <caret line="88" column="0" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.27419356" vertical-offset="1130" max-vertical-offset="2125">
+          <caret line="52" column="22" selection-start-line="52" selection-start-column="22" selection-end-line="52" selection-end-column="22" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
