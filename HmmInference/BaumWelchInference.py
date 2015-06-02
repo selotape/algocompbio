@@ -8,9 +8,6 @@ from StringAlignments.Viterbi import forward
 from StringAlignments.Viterbi import backward
 
 
-# TODO - remove after debug print are removed.
-
-
 def sufficient_statistics(states, alphabet, F, B, T, E, X, log_likelihood):
     E_Ne = init_dict_matrix(states, alphabet, 0)
     E_Nt = init_dict_matrix(states, states, 0)
