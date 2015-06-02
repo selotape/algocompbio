@@ -1,24 +1,15 @@
 import argparse
-from pprint import PrettyPrinter
 
 from BioCommon.Helper import random_hmm_args, header_printer, printer
-from HmmInference.HmmInferenceViterbi import viterbi_inference
+from BioCommon.Consts import *
+from HmmInferenceViterbi import viterbi_inference
 from HmmInferenceBaumWelch import baum_welch_inference
 
 
-
-
-# # # CONSTANTS # # #
-_DEFAULT_MARGIN = 0.001
-_VITERBI = 'Viterbi'
-_BAUM_WELCH = 'BaumWelch'
-pprint = PrettyPrinter(indent=4).pprint
-
-
-def infer_model(method, observation, start_p, emission_p, transmission_p, alphabet, states, sigma=_DEFAULT_MARGIN):
-    if _VITERBI == method:
+def infer_model(method, observation, start_p, emission_p, transmission_p, alphabet, states, sigma=DEFAULT_MARGIN):
+    if VITERBI == method:
         T, E, current_logprob = viterbi_inference(observation, start_p, emission_p, transmission_p, alphabet, states)
-    elif _BAUM_WELCH == method:
+    elif BAUM_WELCH == method:
         T, E, current_logprob = baum_welch_inference(observation, start_p, emission_p, transmission_p, sigma, alphabet,
                                                      states)
     else:

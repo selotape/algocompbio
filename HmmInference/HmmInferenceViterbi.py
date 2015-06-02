@@ -1,8 +1,8 @@
-from BioCommon.Helper import header_printer, printer
-
-__author__ = 'ronvis'
 from collections import defaultdict
 
+from BioCommon.Consts import *
+from BioCommon.Helper import header_printer
+from BioCommon.Helper import printer
 from StringAlignments.Viterbi import viterbi
 
 
@@ -16,6 +16,9 @@ def sufficient_transition_statistics(states, path):
     for current, next in zip(path, path[1:]):
         Nt[current][next] += 1
 
+    for a in states:
+        for b in states:
+            Nt[a][b] += PSEUDO_COUNT
 
     # normalize
     for a in states:
@@ -28,8 +31,6 @@ def sufficient_transition_statistics(states, path):
                 Nt[a][b] = 1.0 / len(states)
         Nt[a] = dict(Nt[a])
 
-    # print 'path:', path
-    # print 'Nt', Nt
     return Nt
 
 
@@ -43,6 +44,10 @@ def sufficient_emission_statistics(states, alphabet, path, X):
     for state, emit in zip(path, X):
         Ne[state][emit] += 1
 
+    for state in states:
+        for c in alphabet:
+            Ne += PSEUDO_COUNT
+
     # normalize
     for state in states:
         total_appearances = sum(Ne[state].values())
@@ -53,9 +58,6 @@ def sufficient_emission_statistics(states, alphabet, path, X):
                 Ne[state][char] = 1.0 / len(alphabet)
         Ne[state] = dict(Ne[state])
 
-    # print 'path:', path
-    # print 'X:', X
-    # print 'Ne', Ne
     return Ne
 
 

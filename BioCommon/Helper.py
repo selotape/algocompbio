@@ -1,8 +1,6 @@
 from random import choice, random
 from math import log
-import sys
 
-MIN_INF = -sys.maxint
 
 __author__ = 'ronvis'
 

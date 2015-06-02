@@ -1,26 +1,14 @@
-from pprint import PrettyPrinter
 import math
 
 from BioCommon.Helper import init_dict_matrix
-from BioCommon.Helper import MIN_INF, log0
+from BioCommon.Helper import log0
 from BioCommon.Helper import printer, header_printer
+from BioCommon.Consts import *
 from StringAlignments.Viterbi import forward
 from StringAlignments.Viterbi import backward
 
 
-
-
-
-
-
-
-
-
-
-
-
 # TODO - remove after debug print are removed.
-pprint = PrettyPrinter(indent=4).pprint
 
 
 def sufficient_statistics(states, alphabet, F, B, T, E, X, log_likelihood):
@@ -32,11 +20,14 @@ def sufficient_statistics(states, alphabet, F, B, T, E, X, log_likelihood):
         for state in states:
             if i < len(X) - 1:
                 for to_state in states:
+                    E_Nt[state][to_state] += PSEUDO_COUNT
                     E_Nt[state][to_state] += \
                         math.exp(
                             log0(T[state][to_state]) + F[i + 1][state] + B[i + 2][to_state] +
                             log0(E[to_state][X[i + 1]])
                             - log_likelihood)  # observation index starts from 0, f and b start from 1
+
+            E_Ne[state][X[i]] += PSEUDO_COUNT
             E_Ne[state][X[i]] += math.exp(F[i + 1][state] + B[i + 1][state] - log_likelihood)
 
     # normalize
@@ -55,8 +46,6 @@ def sufficient_statistics(states, alphabet, F, B, T, E, X, log_likelihood):
 
 
 def baum_welch_inference(X, S, E, T, sigma, alphabet, states):
-    F, forward_likelihood = forward(X, states, S, T, E)
-    B, backward_likelihood = backward(X, states, S, T, E)
 
     last_log_likelihood = MIN_INF
     current_log_likelihood = MIN_INF + 1
