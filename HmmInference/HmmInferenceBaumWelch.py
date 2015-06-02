@@ -16,6 +16,9 @@ from StringAlignments.Viterbi import backward
 
 
 
+
+
+
 # TODO - remove after debug print are removed.
 pprint = PrettyPrinter(indent=4).pprint
 
@@ -71,3 +74,4 @@ def baum_welch_inference(X, S, E, T, sigma, alphabet, states):
         T, E = sufficient_statistics(states, alphabet, F, B, T, E, X, current_log_likelihood)
 
     printer(T, E, current_log_likelihood)
+    return T, E, current_log_likelihood

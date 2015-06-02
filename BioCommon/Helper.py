@@ -1,4 +1,4 @@
-from random import choice
+from random import choice, random
 from math import log
 import sys
 
@@ -62,6 +62,23 @@ def init_dict_matrix(rows, columns, default):
     return M
 
 
+def random_hmm_args():
+    a = random()
+    b = random() * (1 - a)
+    c = random()
+    d = random()
+    e = random() * (1 - d)
+    f = random()
+    g = random()
+    h = random() * (1 - g)
+    i = random()
+    j = random()
+    k = random() * (1 - j)
+    l = random()
+
+    return a, b, c, d, e, f, g, h, i, j, k, l
+
+
 def printer(T, E, score):
     print "| %.2f %.2f %.2f  : %.2f %.2f %.2f  : %.2f %.2f %.2f  : %.2f %.2f %.2f  : %.4f |" % \
           (T['A']['B'], T['A']['C'], E['A']['0'],
@@ -71,7 +88,10 @@ def printer(T, E, score):
 
 
 def header_printer(X):
-    print ' '.join(X)
+    if len(X) > 45:
+        print ''.join(X)
+    else:
+        print ' '.join(X)
     print '------------------------------------------------------------------------------------'
     print "| A->B A->C A->0  : B->A B->D B->0  : C->A C->B C->0  : D->A D->B D->0  :   Score  |"
     print '------------------------------------------------------------------------------------'
