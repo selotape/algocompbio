@@ -2,7 +2,7 @@ import argparse
 
 from BioCommon.Helper import random_hmm_args, header_printer, printer
 from BioCommon.Consts import *
-from ViterbiInference import viterbi_inference
+from BioCommon.ViterbiInference import viterbi_inference
 from BaumWelchInference import baum_welch_inference
 
 

@@ -3,7 +3,7 @@ from collections import defaultdict
 from BioCommon.Consts import *
 from BioCommon.Helper import header_printer
 from BioCommon.Helper import printer
-from StringAlignments.Viterbi import viterbi
+from BioCommon.Viterbi import viterbi
 
 
 def sufficient_transition_statistics(states, path):

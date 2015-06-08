@@ -4,8 +4,8 @@ from BioCommon.Helper import init_dict_matrix
 from BioCommon.Helper import log0
 from BioCommon.Helper import printer, header_printer
 from BioCommon.Consts import *
-from StringAlignments.Viterbi import forward
-from StringAlignments.Viterbi import backward
+from BioCommon.Viterbi import forward
+from BioCommon.Viterbi import backward
 
 
 def sufficient_statistics(states, alphabet, F, B, T, E, X, log_likelihood):
