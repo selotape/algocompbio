@@ -13,7 +13,7 @@ def infer_model(method, observation, start_p, emission_p, transmission_p, alphab
         T, E, current_logprob = baum_welch_inference(observation, start_p, emission_p, transmission_p, sigma, alphabet,
                                                      states)
     else:
-        raise NotImplementedError("algorithm \'%s\' is yet to be invented." % method)
+        raise NotImplementedError("caculate_most_likely_ancestral_states \'%s\' is yet to be invented." % method)
 
     return T, E, current_logprob
 
@@ -41,7 +41,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Execute HMM inference')
     parser.add_argument('-attempts', type=int, default=1)
     parser.add_argument('-hmm_params', type=float, nargs='+', default=random_hmm_args())
-    parser.add_argument('-algorithm', type=str)
+    parser.add_argument('-caculate_most_likely_ancestral_states', type=str)
     parser.add_argument('-observation', type=str)
     args = parser.parse_args()
 
@@ -63,7 +63,6 @@ if __name__ == '__main__':
         attempts -= 1
 
         prm = random_hmm_args()
-
 
     print '\n\n\n'
     print '--------------------------------------------------------------'
