@@ -18,6 +18,8 @@ def initialize_leaf_probabilities(leaf):
     for nucleotide in DNA_NUCLEOTIDES:
         if nucleotide == leaf.nucleotide:
             leaf.nucleotide_probabilities[nucleotide] = 1.0
+        else:
+            leaf.nucleotide_probabilities[nucleotide] = 0.0
 
 
 def initialize(tree):

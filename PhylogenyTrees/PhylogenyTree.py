@@ -1,16 +1,15 @@
 __author__ = 'ronvis'
-from collections import defaultdict
 from pprint import PrettyPrinter
 
 pprint = PrettyPrinter.pprint
 
 class PhylogenyTree:
-    def __init__(self, name, nucleotide='', children=[], father=None, nucleotide_probabilities=defaultdict(int)):
+    def __init__(self, name, nucleotide='', children=None, nucleotide_probabilities=None, father=None):
         self.name = name
         self.nucleotide = nucleotide
-        self.children = children
+        self.children = children or []
         self.father = father
-        self.nucleotide_probabilities = nucleotide_probabilities
+        self.nucleotide_probabilities = nucleotide_probabilities or {}
 
 
     def is_leaf(self):
@@ -23,7 +22,7 @@ class PhylogenyTree:
         ret = self.name
         if self.is_leaf():
             ret = '(' + ret + ')'
-        ret = "\t" * level + ret + "\n"
+        ret = "\t" * level + ret + ' ' + str(self.nucleotide_probabilities) + "\n"
         for child in self.children:
             ret += child.__str__(level + 1)
 
