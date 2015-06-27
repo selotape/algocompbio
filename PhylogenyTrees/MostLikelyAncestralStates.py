@@ -2,11 +2,6 @@ from PhylogenyTrees.PhylogenyTree import PhylogenyTree, initialize_leaf_probabil
 from Consts import *
 
 
-__author__ = 'ronvis'
-
-
-
-
 
 def initialize(tree):
     if tree.is_leaf():
@@ -103,7 +98,45 @@ def bottom_up(tree):
     return tree
 
 
+def down_update_child(tree, chosen_nucleotide):
+    if tree.is_leaf():
+        return tree
+
+    tree.nucleotide = chosen_nucleotide
+    tree.subtree_prob = tree.probabilities_dict[chosen_nucleotide][0]
+    chosen_sources = tree.probabilities_dict[chosen_nucleotide][1]
+
+    updated_children = []
+    for i in range(len(tree.children)):
+        child = tree.children[i]
+        updated_children.append(down_update_child(child, chosen_sources[i]))
+
+    tree.children = updated_children
+
+    return tree
+
+
 def top_down(tree):
+    if tree.is_leaf():
+        return tree
+
+    best_prob = 0.0
+    for nucleotide, (prob, sources) in tree.probabilities_dict.iteritems():
+        if prob > best_prob:
+            best_prob = prob
+            chosen_nucleotide = nucleotide
+            chosen_sources = sources
+
+    tree.nucleotide = chosen_nucleotide
+    tree.subtree_prob = best_prob
+
+    updated_children = []
+    for i in range(len(tree.children)):
+        child = tree.children[i]
+        updated_children.append(down_update_child(child, chosen_sources[i]))
+
+    tree.children = updated_children
+
     return tree
 
 

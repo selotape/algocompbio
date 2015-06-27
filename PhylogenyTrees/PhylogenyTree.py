@@ -25,13 +25,15 @@ class PhylogenyTree:
         self.nucleotide = nucleotide
         self.children = children or []
         self.probabilities_dict = nucleotide_probabilities or empty_nucleotide_probabilities()
+        self.subtree_prob = 0.0
 
 
     def __str__(self, level=0):
         ret = self.name
         if self.is_leaf():
             ret = '(' + ret + ')'
-        ret = "\t" * level + ret + ' ' + str(self.probabilities_dict) + "\n"
+        # ret = "\t" * level + ret + ' ' + str(self.probabilities_dict) + "\n"
+        ret = "\t" * level + ret + ' ' + str(self.nucleotide) + "\n"
         for child in self.children:
             ret += child.__str__(level + 1)
 
