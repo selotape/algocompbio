@@ -16,6 +16,7 @@ def initialize_leaf_probabilities(leaf):
             leaf.probabilities_dict[nucleotide] = (1.0, None)
         else:
             leaf.probabilities_dict[nucleotide] = (0.0, None)
+    leaf.subtree_prob = 1.0
 
 
 class PhylogenyTree:
@@ -32,8 +33,9 @@ class PhylogenyTree:
         ret = self.name
         if self.is_leaf():
             ret = '(' + ret + ')'
-        # ret = "\t" * level + ret + ' ' + str(self.probabilities_dict) + "\n"
-        ret = "\t" * level + ret + ' ' + str(self.nucleotide) + "\n"
+        else:
+            ret = ' ' + ret + ' '
+        ret = "\t" * level + ret + ' ' + str(self.nucleotide) + ' ' + str(self.subtree_prob) + "\n"
         for child in self.children:
             ret += child.__str__(level + 1)
 
