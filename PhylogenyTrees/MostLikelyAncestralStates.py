@@ -35,11 +35,10 @@ def do_children_need_updating(tree):
 
 
 def substitution_probability(X, Y, m_year_lapse):
-    specific_sub_prob = 0.25 * (1 - math.pow(math.e, -(m_year_lapse * SUBTITUTIONS_PER_M_YEARS)))
     if X != Y:
-        return specific_sub_prob
+        return 0.25 * (1 - math.pow(math.e, -(m_year_lapse * SUBTITUTIONS_PER_M_YEARS)))
     else:
-        return 1 - 3 * specific_sub_prob
+        return 0.25 * (1 + 3 * math.pow(math.e, -(m_year_lapse * SUBTITUTIONS_PER_M_YEARS)))
 
 
 def max_prob(X, m_year_lapse, child):  # TODO - find better name
@@ -147,7 +146,7 @@ def caculate_most_likely_ancestral_states(tree):
     return tree
 
 
-def build_tree_for_exercise():  # TODO - shorten, clean, make pretty code
+def build_tree_for_exercise(J_m_years_ago=200):  # TODO - shorten, clean, make pretty code
     A_leaf = PhylogenyTree(name='A', million_years_ago=0, nucleotide=G)
     B_leaf = PhylogenyTree(name='B', million_years_ago=0, nucleotide=T)
     C_leaf = PhylogenyTree(name='C', million_years_ago=0, nucleotide=G)
@@ -159,14 +158,22 @@ def build_tree_for_exercise():  # TODO - shorten, clean, make pretty code
     H_node = PhylogenyTree(name='H', million_years_ago=100, children=[E_leaf, F_leaf])
 
     I_node = PhylogenyTree(name='I', million_years_ago=200, children=[G_node, C_leaf])
-    J_node = PhylogenyTree(name='J', million_years_ago=200, children=[D_leaf, H_node])
+    J_node = PhylogenyTree(name='J', million_years_ago=J_m_years_ago, children=[D_leaf, H_node])
 
     K_node = PhylogenyTree(name='K', million_years_ago=500, children=[I_node, J_node])
 
     return K_node
 
 if __name__ == "__main__":
+    print '============Homework 5, Exercise 2, part a ================'
     tree = build_tree_for_exercise()
     tree = caculate_most_likely_ancestral_states(tree)
     print tree
+
+    print '\n\n\n\n\n\n============Homework 5, Exercise 2, part c ================'
+    for i in range(101, 499):
+        print '===', i, '==='
+        tree = build_tree_for_exercise(J_m_years_ago=i)
+        tree = caculate_most_likely_ancestral_states(tree)
+        print tree
 

@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7e185df8-ed71-4498-bfd7-e701e526f387" name="Default" comment="added the top-down phase.&#10;&#10;the place was dirtied during the work.&#10;&#10;need to write a decent test and then refactor till satisfied.&#10;&#10;good night!">
+    <list default="true" id="7e185df8-ed71-4498-bfd7-e701e526f387" name="Default" comment="prettier printing">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PhylogenyTrees/MostLikelyAncestralStates.py" afterPath="$PROJECT_DIR$/PhylogenyTrees/MostLikelyAncestralStates.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PhylogenyTrees/PhylogenyTree.py" afterPath="$PROJECT_DIR$/PhylogenyTrees/PhylogenyTree.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -17,7 +18,7 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/ComputationalBiology$ModelInference.coverage" NAME="ModelInference Coverage Results" MODIFIED="1433282525252" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HmmInference" />
     <SUITE FILE_PATH="coverage/NeedlemanWunch$SumHomology.coverage" NAME="SumHomology Coverage Results" MODIFIED="1430944770015" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/StringMatching" />
-    <SUITE FILE_PATH="coverage/ComputationalBiology$MostLikelyAncestralStates.coverage" NAME="MostLikelyAncestralStates Coverage Results" MODIFIED="1435388912864" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PhylogenyTrees" />
+    <SUITE FILE_PATH="coverage/ComputationalBiology$MostLikelyAncestralStates.coverage" NAME="MostLikelyAncestralStates Coverage Results" MODIFIED="1435392686731" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PhylogenyTrees" />
     <SUITE FILE_PATH="coverage/NeedlemanWunch$Viterbi.coverage" NAME="Viterbi Coverage Results" MODIFIED="1432898155089" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/StringMatching" />
     <SUITE FILE_PATH="coverage/ComputationalBiology$ModelInference__1_.coverage" NAME="ModelInference Coverage Results" MODIFIED="1433272179151" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HmmInference" />
     <SUITE FILE_PATH="coverage/NeedlemanWunch$main.coverage" NAME="main Coverage Results" MODIFIED="1433193240797" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/StringMatching" />
@@ -39,11 +40,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="PhylogenyTree.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="PhylogenyTree.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PhylogenyTrees/PhylogenyTree.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.46463022" vertical-offset="357" max-vertical-offset="1173">
-              <caret line="38" column="35" selection-start-line="38" selection-start-column="35" selection-end-line="38" selection-end-column="35" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="355" max-vertical-offset="1224">
+              <caret line="27" column="22" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="22" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -54,17 +55,16 @@
       <file leaf-file-name="MostLikelyAncestralStates.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PhylogenyTrees/MostLikelyAncestralStates.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2023">
-              <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2227">
+              <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
               <folding>
                 <element signature="e#0#85#0" expanded="true" />
                 <element signature="e#324#617#0" expanded="false" />
                 <element signature="e#661#764#0" expanded="false" />
-                <element signature="e#821#1013#0" expanded="false" />
-                <element signature="e#1086#1336#0" expanded="false" />
-                <element signature="e#1393#1854#0" expanded="false" />
-                <element signature="e#1884#2109#0" expanded="false" />
-                <element signature="e#2134#2251#0" expanded="false" />
+                <element signature="e#1094#1344#0" expanded="false" />
+                <element signature="e#1401#1862#0" expanded="false" />
+                <element signature="e#1892#2117#0" expanded="false" />
+                <element signature="e#2142#2259#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -90,10 +90,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Consts.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Consts.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PhylogenyTrees/Consts.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="255">
+            <state vertical-scroll-proportion="0.265625" vertical-offset="0" max-vertical-offset="576">
               <caret line="9" column="43" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
               <folding />
             </state>
@@ -156,10 +156,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-9" />
-    <option name="y" value="-9" />
-    <option name="width" value="1938" />
-    <option name="height" value="1050" />
+    <option name="x" value="960" />
+    <option name="width" value="960" />
+    <option name="height" value="1032" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -732,7 +731,11 @@
       <created>1435365981179</created>
       <updated>1435365981179</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="prettier printing">
+      <created>1435389055794</created>
+      <updated>1435389055794</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -756,8 +759,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
-    <editor active="false" />
+    <frame x="960" y="0" width="960" height="1032" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32777777" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32899022" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -766,11 +769,11 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32247558" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32994652" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25882354" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15882353" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33295965" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.48968512" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2888165" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29457363" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32790446" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -817,7 +820,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value=" developed sufficient_transition_statistics_baumwelch.&#10; still untested!" />
     <MESSAGE value="added backward_viterbi to test sufficient_statistics_baum_welch" />
     <MESSAGE value="completed expected emission sufficient statistics.&#10;&#10;but it's buggy.&#10;&#10;so still no-go." />
     <MESSAGE value="sleepybye" />
@@ -842,7 +844,8 @@
     <MESSAGE value="finished entire initialization phase" />
     <MESSAGE value="completed succesfully the bottom-up stage.&#10;now al i gotta do is trace back to find one of the best solutions" />
     <MESSAGE value="added the top-down phase.&#10;&#10;the place was dirtied during the work.&#10;&#10;need to write a decent test and then refactor till satisfied.&#10;&#10;good night!" />
-    <option name="LAST_COMMIT_MESSAGE" value="added the top-down phase.&#10;&#10;the place was dirtied during the work.&#10;&#10;need to write a decent test and then refactor till satisfied.&#10;&#10;good night!" />
+    <MESSAGE value="prettier printing" />
+    <option name="LAST_COMMIT_MESSAGE" value="prettier printing" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -1184,14 +1187,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PhylogenyTrees/Consts.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="255">
-          <caret line="9" column="43" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="18861" max-vertical-offset="27370">
@@ -1208,30 +1203,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PhylogenyTrees/MostLikelyAncestralStates.py">
+    <entry file="file://$PROJECT_DIR$/PhylogenyTrees/PhylogenyTree.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2023">
-          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="355" max-vertical-offset="1224">
+          <caret line="27" column="22" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="22" />
           <folding>
-            <element signature="e#0#85#0" expanded="true" />
-            <element signature="e#324#617#0" expanded="false" />
-            <element signature="e#661#764#0" expanded="false" />
-            <element signature="e#821#1013#0" expanded="false" />
-            <element signature="e#1086#1336#0" expanded="false" />
-            <element signature="e#1393#1854#0" expanded="false" />
-            <element signature="e#1884#2109#0" expanded="false" />
-            <element signature="e#2134#2251#0" expanded="false" />
+            <element signature="e#0#32#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PhylogenyTrees/PhylogenyTree.py">
+    <entry file="file://$PROJECT_DIR$/PhylogenyTrees/MostLikelyAncestralStates.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46463022" vertical-offset="357" max-vertical-offset="1173">
-          <caret line="38" column="35" selection-start-line="38" selection-start-column="35" selection-end-line="38" selection-end-column="35" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2227">
+          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
           <folding>
-            <element signature="e#0#32#0" expanded="true" />
+            <element signature="e#0#85#0" expanded="true" />
+            <element signature="e#324#617#0" expanded="false" />
+            <element signature="e#661#764#0" expanded="false" />
+            <element signature="e#1094#1344#0" expanded="false" />
+            <element signature="e#1401#1862#0" expanded="false" />
+            <element signature="e#1892#2117#0" expanded="false" />
+            <element signature="e#2142#2259#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PhylogenyTrees/Consts.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.265625" vertical-offset="0" max-vertical-offset="576">
+          <caret line="9" column="43" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
+          <folding />
         </state>
       </provider>
     </entry>

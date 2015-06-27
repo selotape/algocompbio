@@ -31,11 +31,17 @@ class PhylogenyTree:
 
     def __str__(self, level=0):
         ret = self.name
+
         if self.is_leaf():
-            ret = '(' + ret + ')'
+            ret = '(' + ret + '),'
         else:
-            ret = ' ' + ret + ' '
-        ret = "\t" * level + ret + ' ' + str(self.nucleotide) + ' ' + str(self.subtree_prob) + "\n"
+            ret = ' ' + ret + ', '
+        # ret = "\t" * level + ret + ' ' + str(self.nucleotide) + ', ' + str(self.subtree_prob) + "\n"
+
+        ret = "\t" * level + str(self.nucleotide)
+        if self.name == 'K':
+            ret = ret + ', ' + str(self.subtree_prob)
+        ret = ret + "\n"
         for child in self.children:
             ret += child.__str__(level + 1)
 
@@ -59,5 +65,3 @@ class PhylogenyTree:
             if prob[0] != 0:
                 return False
         return True
-
-
